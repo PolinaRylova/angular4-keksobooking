@@ -198,26 +198,6 @@ select option:hover {
     color: #ff6547;
 }
 
-.header {
-    z-index: 100;
-
-    position: absolute;
-    margin: 0 auto;
-    width: 1200px;
-    text-align: center;
-
-    text-transform: uppercase;
-}
-
-.header__logo {
-    margin: 20px 0 0;
-}
-
-.header__motto {
-    margin: 0;
-    padding: 0;
-}
-
 .tokyo {
     position: relative;
 }
