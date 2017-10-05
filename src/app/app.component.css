@@ -1,19 +1,17 @@
 .header {
     z-index: 100;
-
     position: absolute;
     margin: 0 auto;
     width: 1200px;
     text-align: center;
-
     text-transform: uppercase;
 }
 
-.header__logo {
-    margin: 20px 0 0;
-}
-
-.header__motto {
-    margin: 0;
-    padding: 0;
+.footer {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 960px;
+    padding: 20px 0 40px;
+    font-size: 12px;
+    border-top: solid 1px #cccccc;
 }
