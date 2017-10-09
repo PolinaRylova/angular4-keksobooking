@@ -18,22 +18,18 @@ h1 {
     font-size: 29px; 
 }
 
-.tokyo__filter {
-    font-size: 14px;
-    text-indent: 0;
-
-    width: 160px;
-    height: 30px;
-
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
 fieldset {
     border: none;
     padding: 0;
     margin: 0;
+}
+
+select {
+    text-indent: 10px;
+}
+
+select option:hover {
+    background-color: #ff6547;
 }
 
 button[type=submit] {
@@ -85,93 +81,14 @@ input[type=text]:focus, input[type=number]:focus, select:focus, textarea:focus {
     box-shadow: 0 0 4px 1px #ff6547;
 }
 
-select {
-    text-indent: 10px;
-}
-
-select option:hover {
-    background-color: #ff6547;
-}
-
 .hidden {
   display: none;
 }
+/* Global style end */
 
-.feature {
-    box-sizing: border-box;
-    width: 70px;
-    min-width: 70px;
-    height: 45px;
-    min-height: 45px;
-
-    margin-right: 10px;
-
-    float: left;
-
-    position: relative;
-}
-
+/*  стиль для conditioner */
 .feature:last-child {
     margin-right: 0;
-}
-
-.feature span {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    box-sizing: border-box;
-
-    border-radius: 4px;
-    border: 1px solid #d9d9d3;
-}
-
-.feature input {
-    position: absolute;
-}
-
-.feature input:hover + span {
-    border-color: #ffaa99;
-}
-
-.feature input:checked + span {
-    background-color: #ff6547;
-    border-color: #ff6547;
-}
-
-.feature__image {
-    box-sizing: border-box;
-    width: 70px;
-    min-width: 70px;
-    height: 45px;
-    min-height: 45px;
-
-    background: white url("assets/img/features-sprite.png") no-repeat;
-}
-
-.feature__image--dishwasher {
-    background-position: 0 -7px;
-}
-
-.feature__image--elevator {
-    background-position: 5px -61px;
-}
-
-.feature__image--conditioner {
-    background-position: 7px -117px;
-}
-
-.feature__image--parking {
-    background-position: 5px -173px;
-}
-
-.feature__image--washer {
-    background-position: 7px -229px;
-}
-
-.feature__image--wifi {
-    background-position: 3px -285px;
 }
 
 .upload {
@@ -327,17 +244,6 @@ select option:hover {
 .form__submit {
     display: block;
     margin: 35px auto;
-}
-
-.footer {
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 960px;
-    padding: 20px 0 40px;
-
-    font-size: 12px;
-
-    border-top: solid 1px #cccccc;
 }
 
 .dialog {
