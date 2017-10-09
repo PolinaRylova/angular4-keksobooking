@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-header',
+  templateUrl: './app-header.component.html',
+  styleUrls: ['./app-header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class AppHeaderComponent implements OnInit {
   title = 'KEKSOBOOKING';
   subtitle = 'КЕКСЫ ПО СОСЕДСТВУ';
 

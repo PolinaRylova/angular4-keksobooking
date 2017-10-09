@@ -1,17 +1,8 @@
-.header {
+app-header {
     z-index: 100;
     position: absolute;
     margin: 0 auto;
     width: 1200px;
     text-align: center;
     text-transform: uppercase;
-}
-
-.footer {
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 960px;
-    padding: 20px 0 40px;
-    font-size: 12px;
-    border-top: solid 1px #cccccc;
 }

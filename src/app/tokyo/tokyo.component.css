@@ -1,8 +1,4 @@
-tokyo {
-    position: relative;
-}
-
-.tokyo__filters-container {
+tokyo-filters {
     width: 1200px;
     position: absolute;
     bottom: 0;

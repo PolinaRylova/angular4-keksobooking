@@ -10,6 +10,26 @@ body {
     color: #353535;
 }
 
+h1, h2 {
+    color: #343434;
+}
+
+h1 {
+    font-size: 29px; 
+}
+
+.tokyo__filter {
+    font-size: 14px;
+    text-indent: 0;
+
+    width: 160px;
+    height: 30px;
+
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 fieldset {
     border: none;
     padding: 0;
@@ -186,91 +206,6 @@ select option:hover {
 .upload:hover {
     border-color: #ff6547;
     color: #ff6547;
-}
-
-.tokyo {
-    position: relative;
-}
-
-.tokyo__filters-container {
-    width: 1200px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    background-color: rgba(3, 28, 45, 0.5);
-
-    height: 46px;
-}
-
-.tokyo__filters {
-    width: 960px;
-
-    margin: 0 auto;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-.tokyo__filter {
-    font-size: 14px;
-    text-indent: 0;
-
-    width: 160px;
-    height: 30px;
-
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.tokyo__filter-set {
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-
-    display: inline;
-}
-
-.tokyo__filter-set .feature {
-    width: 30px;
-    min-width: 30px;
-    height: 28px;
-    min-height: 28px;
-}
-
-.tokyo__filter-set .feature__image {
-    width: 30px;
-    min-width: 30px;
-    height: 28px;
-    min-height: 28px;
-
-    background-size: 100%;
-}
-
-.tokyo__filter-set .feature__image--dishwasher {
-    background-position: 0 1px;
-}
-
-.tokyo__filter-set .feature__image--elevator {
-    background-position: 2px -22px;
-}
-
-.tokyo__filter-set .feature__image--conditioner {
-    background-position: 2px -46px;
-}
-
-.tokyo__filter-set .feature__image--parking {
-    background-position: 2px -70px;
-}
-
-.tokyo__filter-set .feature__image--washer {
-    background-position: 2px -94px;
-}
-
-.tokyo__filter-set .feature__image--wifi {
-    background-position: 1px -118px;
 }
 
 .notice {
