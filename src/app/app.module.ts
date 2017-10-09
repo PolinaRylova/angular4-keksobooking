@@ -13,6 +13,11 @@ import { HousePriceComponent } from './house-price/house-price.component';
 import { HouseRoomsComponent } from './house-rooms/house-rooms.component';
 import { HouseGuestsComponent } from './house-guests/house-guests.component';
 import { HouseWifiComponent } from './house-wifi/house-wifi.component';
+import { HouseDishwasherComponent } from './house-dishwasher/house-dishwasher.component';
+import { HouseParkingComponent } from './house-parking/house-parking.component';
+import { HouseWasherComponent } from './house-washer/house-washer.component';
+import { HouseElevatorComponent } from './house-elevator/house-elevator.component';
+import { HouseConditionerComponent } from './house-conditioner/house-conditioner.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { HouseWifiComponent } from './house-wifi/house-wifi.component';
     HousePriceComponent,
     HouseRoomsComponent,
     HouseGuestsComponent,
-    HouseWifiComponent
+    HouseWifiComponent,
+    HouseDishwasherComponent,
+    HouseParkingComponent,
+    HouseWasherComponent,
+    HouseElevatorComponent,
+    HouseConditionerComponent
   ],
   imports: [
     BrowserModule
