@@ -1,8 +1,10 @@
 tokyo {
     position: relative;
+    display: block;
 }
 
 notice {
+    display: block;
     max-width: 960px;
     margin: 0 auto;
 }

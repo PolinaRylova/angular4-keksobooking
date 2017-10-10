@@ -2,8 +2,8 @@
     display: flex;
     box-sizing: border-box;
     width: 960px;
-    margin: 0 auto;
-    padding: 20px 0 40px;
+    margin: 20px auto;
+    padding: 20px 0;
     font-size: 12px;
     border-top: solid 1px #cccccc;
 }

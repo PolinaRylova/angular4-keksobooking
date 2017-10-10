@@ -18,6 +18,7 @@ import { HouseParkingComponent } from './house-parking/house-parking.component';
 import { HouseWasherComponent } from './house-washer/house-washer.component';
 import { HouseElevatorComponent } from './house-elevator/house-elevator.component';
 import { HouseConditionerComponent } from './house-conditioner/house-conditioner.component';
+import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HouseConditionerComponent } from './house-conditioner/house-conditioner
     HouseParkingComponent,
     HouseWasherComponent,
     HouseElevatorComponent,
-    HouseConditionerComponent
+    HouseConditionerComponent,
+    TokyoPinMapComponent
   ],
   imports: [
     BrowserModule
