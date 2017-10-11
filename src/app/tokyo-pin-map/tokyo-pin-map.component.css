@@ -18,7 +18,7 @@
   box-shadow: 0 0 30px rgb(128, 30, 0);
 }
 
-.pin--active {
+.selected {
     background-image: url("../../assets/img/pin-active.png");
 }
 
