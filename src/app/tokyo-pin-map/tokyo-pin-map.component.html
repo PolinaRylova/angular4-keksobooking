@@ -1,3 +1,6 @@
 <div class="pin pin__main">
   <img src="./assets/img/main-pin-image.png" alt="Main Pin" class="rounded" width="40" height="44">
 </div>
+<div class="pin" tabindex="1" *ngFor="let notice of notices">
+  <img src="{{ notice.author.avatar }}" class="rounded">
+</div>
