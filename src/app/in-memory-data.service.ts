@@ -6,7 +6,7 @@ export class InMemoryDataService implements InMemoryDbService {
     const notices = [
       {
         "author": {
-          "avatar": "img/avatars/user01.png"
+          "avatar": "../assets/img/avatars/user01.png"
         },
         "offer": {
           "title": "Уютное гнездышко для молодоженов",
@@ -43,7 +43,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "author": {
-          "avatar": "img/avatars/user02.png"
+          "avatar": "../assets/img/avatars/user02.png"
         },
         "offer": {
           "title": "Маленькая квартирка рядом с парком",
@@ -71,7 +71,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "author": {
-          "avatar": "img/avatars/user03.png"
+          "avatar": "../assets/img/avatars/user03.png"
         },
         "offer": {
           "title": "Небольшая лавочка в парке",
@@ -93,7 +93,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "author": {
-          "avatar": "img/avatars/user04.png"
+          "avatar": "../assets/img/avatars/user04.png"
         },
         "offer": {
           "title": "Императорский дворец в центре Токио",
@@ -135,7 +135,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "author": {
-          "avatar": "img/avatars/user05.png"
+          "avatar": "../assets/img/avatars/user05.png"
         },
         "offer": {
           "title": "Милейший чердачок",
@@ -166,7 +166,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "author": {
-          "avatar": "img/avatars/default.png"
+          "avatar": "../assets/img/avatars/default.png"
         },
         "offer": {
           "title": "Наркоманский притон",
@@ -197,7 +197,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "author": {
-          "avatar": "img/avatars/user06.png"
+          "avatar": "../assets/img/avatars/user06.png"
         },
         "offer": {
           "title": "Чёткая хата",
@@ -230,7 +230,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "author": {
-          "avatar": "img/avatars/user07.png"
+          "avatar": "../assets/img/avatars/user07.png"
         },
         "offer": {
           "title": "Стандартная квартира в центре",
@@ -262,7 +262,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "author": {
-          "avatar": "img/avatars/user08.png"
+          "avatar": "../assets/img/avatars/user08.png"
         },
         "offer": {
           "title": "Тихая квартирка недалеко от метро",
@@ -293,7 +293,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         "author": {
-          "avatar": "img/avatars/default.png"
+          "avatar": "../assets/img/avatars/default.png"
         },
         "offer": {
           "title": "Милое гнездышко для фанатов Анимэ",
