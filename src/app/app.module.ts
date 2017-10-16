@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-
+import { HttpModule } from '@angular/http';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
@@ -22,10 +21,16 @@ import { HouseParkingComponent } from './house-parking/house-parking.component';
 import { HouseWasherComponent } from './house-washer/house-washer.component';
 import { HouseElevatorComponent } from './house-elevator/house-elevator.component';
 import { HouseConditionerComponent } from './house-conditioner/house-conditioner.component';
-import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
 import { NoticeService } from './notice/notice.service';
+import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
+
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
+  ],
   declarations: [
     AppComponent,
     AppHeaderComponent,
@@ -45,11 +50,6 @@ import { NoticeService } from './notice/notice.service';
     HouseElevatorComponent,
     HouseConditionerComponent,
     TokyoPinMapComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
