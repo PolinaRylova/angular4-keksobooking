@@ -23,6 +23,7 @@ import { HouseWasherComponent } from './house-washer/house-washer.component';
 import { HouseElevatorComponent } from './house-elevator/house-elevator.component';
 import { HouseConditionerComponent } from './house-conditioner/house-conditioner.component';
 import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
+import { NoticeService } from './notice/notice.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
-  providers: [],
+  providers: [NoticeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
