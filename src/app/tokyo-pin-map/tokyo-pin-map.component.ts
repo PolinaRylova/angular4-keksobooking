@@ -12,12 +12,17 @@ import { NoticeService } from '../notice/notice.service';
 })
 export class TokyoPinMapComponent implements OnInit {
   notices: Notice[] = [];
+  selectedNotice: Notice;
 
   constructor(private noticeService: NoticeService) { }
 
   ngOnInit(): void {
     this.noticeService.getNotices()
       .then(notices => this.notices = notices);
+  }
+
+  onSelect(notice: Notice): void {
+    this.selectedNotice = notice;
   }
 
 }
