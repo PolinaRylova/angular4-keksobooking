@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { NgStyle } from '@angular/common';
+
 import { Notice } from '../notice/notice';
 import { NoticeService } from '../notice/notice.service';
 
