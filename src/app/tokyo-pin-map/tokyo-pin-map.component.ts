@@ -19,7 +19,7 @@ export class TokyoPinMapComponent implements OnInit {
   ngOnInit(): void {
     this.noticeService.getNotices()
       .then(notices => {
-        this.notices = notices;
+        this.notices = notices.slice(0, 3);
         this.selectedNotice = notices[0];
       });
   }
