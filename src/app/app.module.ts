@@ -23,6 +23,7 @@ import { HouseElevatorComponent } from './house-elevator/house-elevator.componen
 import { HouseConditionerComponent } from './house-conditioner/house-conditioner.component';
 import { NoticeService } from './notice/notice.service';
 import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
+import { TokyoOfferDialogComponent } from './tokyo-offer-dialog/tokyo-offer-dialog.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
     HouseWasherComponent,
     HouseElevatorComponent,
     HouseConditionerComponent,
-    TokyoPinMapComponent
+    TokyoPinMapComponent,
+    TokyoOfferDialogComponent
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
