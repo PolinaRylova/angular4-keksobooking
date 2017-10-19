@@ -1,0 +1,111 @@
+.dialog__title {
+    position: relative;
+}
+
+.dialog__close {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+}
+
+.dialog__panel {
+    background-color: white;
+
+    padding: 4px;
+
+    border-radius: 4px;
+    border: 2px solid transparent;
+}
+
+.lodge__title {
+    margin: 0 0 4px;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.lodge__address {
+    margin: 0 0 10px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.lodge__price {
+    margin: 0 0 10px;
+    font-size: 22px;
+    line-height: 16px;
+}
+
+.lodge__type {
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.lodge__rooms-and-guests {
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.lodge__checkin-time {
+    margin: 0;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.lodge__features {
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.lodge__features .feature__image {
+    content: "";
+
+    display: block;
+    box-sizing: border-box;
+    background: white url("../../assets/img/features-sprite.png") no-repeat;
+
+    width: 30px;
+    min-width: 30px;
+    height: 28px;
+    min-height: 28px;
+
+    background-size: 100%;
+}
+
+.lodge__features .feature__image--dishwasher {
+    background-position: 0 1px;
+}
+
+.lodge__features .feature__image--elevator {
+    background-position: 2px -23px;
+}
+
+.lodge__features .feature__image--conditioner {
+    background-position: 2px -49px;
+}
+
+.lodge__features .feature__image--parking {
+    background-position: 2px -75px;
+}
+
+.lodge__features .feature__image--washer {
+    background-position: 2px -101px;
+}
+
+.lodge__features .feature__image--wifi {
+    background-position: 1px -126px;
+}
+
+.lodge__description {
+    margin: 0 0 10px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.lodge__photos img {
+  margin: 0 1px;
+}
