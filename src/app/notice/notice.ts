@@ -11,9 +11,9 @@ export class Notice {
         "guests": number,
         "checkin": string,
         "checkout": string,
-        "features": Array<string>,
+        "features": string[],
         "description": string,
-        "photos": Array<string>
+        "photos": string[]
       };
       "location": {
         "x": number,
