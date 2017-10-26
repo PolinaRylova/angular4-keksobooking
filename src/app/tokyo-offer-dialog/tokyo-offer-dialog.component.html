@@ -1,26 +1,20 @@
 <div class="dialog__title">
-  <img src="../assets/img/avatars/user01.png" alt="Avatar" width="70" height="70">
+  <img src="{{ selectedNotice.author.avatar }}" alt="Avatar" width="70" height="70">
   <a href="#" class="dialog__close" tabindex="1">
     <img src="../assets/img/close.svg" alt="close" width="22" height="22">
   </a>
 </div>
 <div class="dialog__panel">
-    <h3 class="lodge__title">Уютное гнездышко для молодоженов</h3>
-    <p class="lodge__address">102-0082 Tōkyō-to, Chiyoda-ku, Ichibanchō, 14−3</p>
-    <h3 class="lodge__price">42000 ₽/ночь</h3>
-    <h4 class="lodge__type">Дом</h4>
-    <p class="lodge__rooms-and-guests">Для 6 гостей в 3 комнатах</p>
-    <p class="lodge__checkin-time">Заезд после 14:00, выезд до 10:00</p>
+    <h3 class="lodge__title">{{ selectedNotice.offer.title }}</h3>
+    <p class="lodge__address">{{ selectedNotice.offer.address }}</p>
+    <h3 class="lodge__price">{{ selectedNotice.offer.price }} ₽/ночь</h3>
+    <h4 class="lodge__type">{{ selectedNotice.offer.type }}</h4>
+    <p class="lodge__rooms-and-guests">Для {{ selectedNotice.offer.guests }} гостей в {{ selectedNotice.offer.rooms }} комнатах</p>
+    <p class="lodge__checkin-time">Заезд после {{ selectedNotice.offer.checkin }}, выезд до {{ selectedNotice.offer.checkout }}</p>
     <div class="lodge__features">
-        <span class="feature__image feature__image--wifi"></span>
-        <span class="feature__image feature__image--dishwasher"></span>
-        <span class="feature__image feature__image--parking"></span>
-        <span class="feature__image feature__image--washer"></span>
-        <span class="feature__image feature__image--elevator"></span>
-        <span class="feature__image feature__image--conditioner"></span>
+        <span *ngFor="let feature of {{ selectedNotice.offer.features }}" class="feature__image feature__image--{{ feature }}"></span>
     </div>
-    <p class="lodge__description">Великолепный таун-хауз в центре Токио. Подходит как туристам, 
-      так и бизнесменам. Дом полностью укомплектован и имеет свежий ремонт.
+    <p class="lodge__description">{{ selectedNotice.offer.description }}
     </p>
     <div class="lodge__photos"></div>
   </div>
