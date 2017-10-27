@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { Notice } from '../notice/notice';
 
 @Component({
   selector: 'tokyo',
   templateUrl: './tokyo.component.html',
   styleUrls: ['./tokyo.component.css']
 })
-export class TokyoComponent implements OnInit {
+export class TokyoComponent {
+
+  selectedNotice: Notice;
 
   constructor() { }
 
-  ngOnInit() {
+  onSelectedHandler(notice: Notice) {
+    this.selectedNotice = notice;
+    console.log(notice);
   }
 
 }

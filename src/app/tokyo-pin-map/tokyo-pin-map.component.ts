@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { NgStyle } from '@angular/common';
 
@@ -11,6 +11,9 @@ import { NoticeService } from '../notice/notice.service';
   styleUrls: ['./tokyo-pin-map.component.css']
 })
 export class TokyoPinMapComponent implements OnInit {
+
+  @Output() onSelectedEmitter = new EventEmitter<Notice>();
+
   notices: Notice[] = [];
   selectedNotice: Notice;
 
@@ -21,11 +24,12 @@ export class TokyoPinMapComponent implements OnInit {
       .then(notices => {
         this.notices = notices.slice(0, 3);
         this.selectedNotice = notices[0];
+        this.onSelectedEmitter.emit(notices[0]);
       });
   }
 
-  onSelect(notice: Notice): void {
+  onSelect(notice: Notice) {
     this.selectedNotice = notice;
+    this.onSelectedEmitter.emit(notice);
   }
-
 }

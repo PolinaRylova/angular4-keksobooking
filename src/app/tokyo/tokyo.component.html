@@ -1,4 +1,4 @@
 <img src="./assets/img/main.jpg" alt="Tokyo" width="1200" height="700">
 <tokyo-filters></tokyo-filters>
-<tokyo-pin-map></tokyo-pin-map>
-<tokyo-offer-dialog class="dialog"></tokyo-offer-dialog>
+<tokyo-pin-map (onSelectedEmitter)="onSelectedHandler($event)"></tokyo-pin-map>
+<tokyo-offer-dialog [selectedNotice]="selectedNotice" class="dialog"></tokyo-offer-dialog>
