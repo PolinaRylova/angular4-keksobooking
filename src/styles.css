@@ -85,7 +85,7 @@ input[type=text]:focus, input[type=number]:focus, select:focus, textarea:focus {
   display: none;
 }
 
-.tokyo__filter-set-feature {
+.filter-set__feature {
     box-sizing: border-box;
     width: 30px;
     min-width: 30px;
@@ -108,9 +108,7 @@ input[type=text]:focus, input[type=number]:focus, select:focus, textarea:focus {
     background-color: #ff6547;
     border-color: #ff6547;
 }
-/* Global style end */
 
-/* Стили для изображений в форме
 .feature__image {
     content: "";
     position: absolute;
@@ -129,11 +127,7 @@ input[type=text]:focus, input[type=number]:focus, select:focus, textarea:focus {
     border: 1px solid #d9d9d3;
     border-radius: 4px;
 }
-
-/*  стиль для conditioner */
-.feature:last-child {
-    margin-right: 0;
-}
+/* Global style end */
 
 .upload {
     position: relative;
