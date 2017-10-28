@@ -56,14 +56,12 @@
 
 .lodge__features {
     margin: 10px 0;
-
+    position: relative;
     display: flex;
     flex-direction: row;
 }
 
-.lodge__features .feature__image {
-    content: "";
-
+.lodge__feature-image {
     display: block;
     box-sizing: border-box;
     background: white url("../../assets/img/features-sprite.png") no-repeat;
@@ -76,27 +74,27 @@
     background-size: 100%;
 }
 
-.lodge__features .feature__image--dishwasher {
+.lodge__feature-image--dishwasher {
     background-position: 0 1px;
 }
 
-.lodge__features .feature__image--elevator {
+.lodge__feature-image--elevator {
     background-position: 2px -23px;
 }
 
-.lodge__features .feature__image--conditioner {
+.lodge__feature-image--conditioner {
     background-position: 2px -49px;
 }
 
-.lodge__features .feature__image--parking {
+.lodge__feature-image--parking {
     background-position: 2px -75px;
 }
 
-.lodge__features .feature__image--washer {
+.lodge__feature-image--washer {
     background-position: 2px -101px;
 }
 
-.lodge__features .feature__image--wifi {
+.lodge__feature-image--wifi {
     background-position: 1px -126px;
 }
 
