@@ -1,20 +1,20 @@
-<div class="dialog__title">
+<div *ngIf="selectedNotice != undefined" class="dialog__title">
   <img src="{{ selectedNotice.author.avatar }}" alt="Avatar" width="70" height="70">
   <a href="#" class="dialog__close" tabindex="1">
     <img src="../assets/img/close.svg" alt="close" width="22" height="22">
   </a>
 </div>
-<div class="dialog__panel">
-    <h3 class="lodge__title">{{ selectedNotice.offer.title }}</h3>
-    <p class="lodge__address">{{ selectedNotice.offer.address }}</p>
-    <h3 class="lodge__price">{{ selectedNotice.offer.price }} ₽/ночь</h3>
-    <h4 class="lodge__type">{{ selectedNotice.offer.type }}</h4>
-    <p class="lodge__rooms-and-guests">Для {{ selectedNotice.offer.guests }} гостей в {{ selectedNotice.offer.rooms }} комнатах</p>
-    <p class="lodge__checkin-time">Заезд после {{ selectedNotice.offer.checkin }}, выезд до {{ selectedNotice.offer.checkout }}</p>
-    <div class="lodge__features">
-        <span *ngFor="let offerfeature of selectedNotice.offer.features" class="lodge__feature-image lodge__feature-image--{{ offerfeature }}"></span>
-    </div>
-    <p class="lodge__description">{{ selectedNotice.offer.description }}
-    </p>
-    <div class="lodge__photos"></div>
+<div *ngIf="selectedNotice != undefined" class="dialog__panel">
+  <h3 class="lodge__title">{{ selectedNotice.offer.title }}</h3>
+  <p class="lodge__address">{{ selectedNotice.offer.address }}</p>
+  <h3 class="lodge__price">{{ selectedNotice.offer.price }} ₽/ночь</h3>
+  <h4 class="lodge__type">{{ selectedNotice.offer.type }}</h4>
+  <p class="lodge__rooms-and-guests">Для {{ selectedNotice.offer.guests }} гостей в {{ selectedNotice.offer.rooms }} комнатах</p>
+  <p class="lodge__checkin-time">Заезд после {{ selectedNotice.offer.checkin }}, выезд до {{ selectedNotice.offer.checkout }}</p>
+  <div class="lodge__features">
+      <span *ngFor="let offerfeature of selectedNotice.offer.features" class="lodge__feature-image lodge__feature-image--{{ offerfeature }}"></span>
   </div>
+  <p class="lodge__description">{{ selectedNotice.offer.description }}
+  </p>
+  <div class="lodge__photos"></div>
+</div>
