@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 import { NgStyle } from '@angular/common';
 
@@ -12,10 +12,10 @@ import { NoticeService } from '../notice/notice.service';
 })
 export class TokyoPinMapComponent implements OnInit {
 
-  @Output() onSelectedEmitter = new EventEmitter<Notice>();
-
   notices: Notice[] = [];
-  selectedNotice: Notice;
+
+  @Output() onSelectedEmitter = new EventEmitter<Notice>();
+  @Input() selectedNotice: Notice;
 
   constructor(private noticeService: NoticeService) { }
 
@@ -28,8 +28,10 @@ export class TokyoPinMapComponent implements OnInit {
       });
   }
 
-  onSelect(notice: Notice) {
+  onSelect(notice: Notice, event) {
+    event.stopPropagation();
     this.selectedNotice = notice;
+    console.log("Событие клика по пину произошло");
     this.onSelectedEmitter.emit(notice);
   }
 }

@@ -13,9 +13,12 @@ export class TokyoComponent {
 
   constructor() { }
 
-  onSelectedHandler(notice: Notice) {
+  onSelectedHandler(notice: Notice, deselected: boolean) {
     this.selectedNotice = notice;
-    console.log(notice);
   }
 
+  deselectNotice() {
+    this.selectedNotice = null;
+    console.log('Событие клика по фоновой картинке tokyo произошло, полю tokyo компонента selectedNotice присвоено значение ' + this.selectedNotice);
+  }
 }
