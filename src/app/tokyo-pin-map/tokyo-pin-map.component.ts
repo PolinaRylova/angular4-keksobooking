@@ -14,7 +14,7 @@ export class TokyoPinMapComponent implements OnInit {
 
   notices: Notice[] = [];
 
-  @Output() onSelectedEmitter = new EventEmitter<Notice>();
+  @Output() selectedEmitter = new EventEmitter<Notice>();
   @Input() selectedNotice: Notice;
 
   constructor(private noticeService: NoticeService) { }
@@ -24,7 +24,7 @@ export class TokyoPinMapComponent implements OnInit {
       .then(notices => {
         this.notices = notices.slice(0, 3);
         this.selectedNotice = notices[0];
-        this.onSelectedEmitter.emit(notices[0]);
+        this.selectedEmitter.emit(notices[0]);
       });
   }
 
@@ -32,6 +32,6 @@ export class TokyoPinMapComponent implements OnInit {
     event.stopPropagation();
     this.selectedNotice = notice;
     console.log("Событие клика по пину произошло");
-    this.onSelectedEmitter.emit(notice);
+    this.selectedEmitter.emit(notice);
   }
 }
