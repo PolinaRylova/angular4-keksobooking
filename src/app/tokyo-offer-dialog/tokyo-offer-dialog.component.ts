@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
 import { Notice } from '../notice/notice';
 
@@ -18,5 +19,23 @@ export class TokyoOfferDialogComponent {
     console.log("Событие клика по крестику произошло");
     this.hideDialogEmitter.emit();
   }
+
+  getRusLodgeType(type: string) {
+    let rusLodgeType: string;
+    switch (type) {
+      case 'flat':
+        rusLodgeType = 'Квартира';
+        break;
+      case 'house':
+        rusLodgeType = 'Дом';
+        break;
+      case 'bungalo':
+        rusLodgeType = 'Бунгало';
+        break;
+      default:
+        rusLodgeType = 'Тип не указан';
+    }
+    return rusLodgeType;
+  };
 
 }

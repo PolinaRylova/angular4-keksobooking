@@ -9,7 +9,7 @@
     <h3 class="lodge__title">{{ selectedNotice.offer.title }}</h3>
     <p class="lodge__address">{{ selectedNotice.offer.address }}</p>
     <h3 class="lodge__price">{{ selectedNotice.offer.price }} ₽/ночь</h3>
-    <h4 class="lodge__type">{{ selectedNotice.offer.type }}</h4>
+    <h4 class="lodge__type">{{ getRusLodgeType(selectedNotice.offer.type) }}</h4>
     <p class="lodge__rooms-and-guests">Для {{ selectedNotice.offer.guests }} гостей в {{ selectedNotice.offer.rooms }} комнатах</p>
     <p class="lodge__checkin-time">Заезд после {{ selectedNotice.offer.checkin }}, выезд до {{ selectedNotice.offer.checkout }}</p>
     <div class="lodge__features">
