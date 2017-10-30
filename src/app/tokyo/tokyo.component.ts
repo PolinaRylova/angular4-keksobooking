@@ -13,7 +13,7 @@ export class TokyoComponent {
 
   constructor() { }
 
-  selectedHandler(notice: Notice, deselected: boolean) {
+  selectedHandler(notice: Notice) {
     this.selectedNotice = notice;
   }
 

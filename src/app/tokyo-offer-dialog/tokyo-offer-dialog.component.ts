@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Notice } from '../notice/notice';
 
@@ -10,7 +10,13 @@ import { Notice } from '../notice/notice';
 export class TokyoOfferDialogComponent {
 
   @Input() selectedNotice: Notice;
+  @Output() hideDialogEmitter = new EventEmitter<Notice>();
 
   constructor() { }
+
+  hideDialog() {
+    console.log("Событие клика по крестику произошло");
+    this.hideDialogEmitter.emit();
+  }
 
 }

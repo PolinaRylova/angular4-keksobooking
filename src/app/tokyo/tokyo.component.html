@@ -1,4 +1,4 @@
 <img src="./assets/img/main.jpg" alt="Tokyo" width="1200" height="700" (click)="deselectNotice()">
 <tokyo-filters></tokyo-filters>
 <tokyo-pin-map [selectedNotice]="selectedNotice" (selectedEmitter)="selectedHandler($event)"></tokyo-pin-map>
-<tokyo-offer-dialog [selectedNotice]="selectedNotice" [class.hidden]="selectedNotice === undefined || selectedNotice === null" class="dialog"></tokyo-offer-dialog>
+<tokyo-offer-dialog [selectedNotice]="selectedNotice" [class.hidden]="selectedNotice === undefined || selectedNotice === null" (hideDialogEmitter)="deselectNotice()" class="dialog"></tokyo-offer-dialog>

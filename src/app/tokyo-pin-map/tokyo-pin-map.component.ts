@@ -28,7 +28,7 @@ export class TokyoPinMapComponent implements OnInit {
       });
   }
 
-  onSelect(notice: Notice, event) {
+  selectPin(notice: Notice, event) {
     event.stopPropagation();
     this.selectedNotice = notice;
     console.log("Событие клика по пину произошло");
