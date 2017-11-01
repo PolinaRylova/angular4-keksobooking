@@ -30,7 +30,7 @@ export class TokyoOfferDialogComponent {
         rusLodgeType = 'Дом';
         break;
       case 'bungalo':
-        rusLodgeType = 'Бунгало';
+        rusLodgeType = 'Сарай';
         break;
       default:
         rusLodgeType = 'Тип не указан';
