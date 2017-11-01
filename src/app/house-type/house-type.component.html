@@ -1,8 +1,5 @@
 <label>
   <select name="housing_type" id="housing_type" class="tokyo__filter">
-    <option value="any" selected>Любой тип жилья</option>
-    <option value="flat">Квартира</option>
-    <option value="house">Дом</option>
-    <option value="bungalo">Сарай</option>
+    <option *ngFor="let houseType of houseTypes" [value]="houseType.key">{{houseType.value}}</option>
   </select>
 </label>
