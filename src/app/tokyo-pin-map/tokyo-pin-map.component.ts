@@ -34,4 +34,11 @@ export class TokyoPinMapComponent implements OnInit {
     console.log("Событие клика по пину произошло");
     this.selectedEmitter.emit(notice);
   }
+
+  showFilteredNoticesHandler(filteredNotices) {
+    this.notices = filteredNotices;
+    this.selectedNotice = filteredNotices[0];
+    this.selectedEmitter.emit(filteredNotices[0]);
+  }
+
 }

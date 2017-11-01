@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,EventEmitter, Output } from '@angular/core';
 
 import { Notice } from '../notice/notice';
 
@@ -11,10 +11,17 @@ export class TokyoComponent {
 
   selectedNotice: Notice;
 
+  @Output() showFilteredNoticesEmitter = new EventEmitter<Notice[]>();
+
   constructor() { }
 
   selectedHandler(notice: Notice) {
     this.selectedNotice = notice;
+  }
+
+  filteredNoticesHandler(filteredNotices) {
+    this.selectedNotice = filteredNotices[0];
+    this.showFilteredNoticesEmitter.emit(filteredNotices);
   }
 
   deselectNotice() {
