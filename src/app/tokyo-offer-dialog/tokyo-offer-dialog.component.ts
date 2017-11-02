@@ -16,7 +16,6 @@ export class TokyoOfferDialogComponent {
   constructor() { }
 
   hideDialog() {
-    console.log("Событие клика по крестику произошло");
     this.hideDialogEmitter.emit();
   }
 

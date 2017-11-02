@@ -1,7 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Notice } from '../notice/notice';
-import { NoticeService } from '../notice/notice.service';
 
 @Component({
   selector: 'tokyo-filters',
@@ -9,9 +8,10 @@ import { NoticeService } from '../notice/notice.service';
   styleUrls: ['./tokyo-filters.component.css']
 })
 
-export class TokyoFiltersComponent implements OnInit {
+export class TokyoFiltersComponent {
 
-  notices: Notice[] = [];
+  @Input() notices: Notice[];
+  @Output() filteredNoticesEmitter = new EventEmitter<Notice[]>();
 
   housingType: string = "any";
   housingPrice: string = "any";
@@ -42,31 +42,22 @@ export class TokyoFiltersComponent implements OnInit {
     "checked": false
   };
 
-  @Output() filteredNoticesEmitter = new EventEmitter<Notice[]>();
-
-  constructor(private noticeService: NoticeService) { }
-
-  ngOnInit(): void {
-    this.noticeService.getNotices()
-      .then(notices => {
-        this.notices = notices;
-      });
-    }    
+  constructor() { }  
 
   saveFilterValues(event) {
     let filterValue: any = event.target.value;
     if (event.target.id) {
       switch (event.target.id) {
-        case 'housing__type':
+        case "housing_type":
           this.housingType = filterValue;
           break;
-        case 'housing__price':
+        case 'housing_price':
           this.housingPrice = filterValue;
           break;
-        case 'housing__rooms':
+        case 'housing_rooms':
           this.housingRooms = filterValue;
           break;
-        case 'housing__guests':
+        case 'housing_guests':
           this.housingGuests = filterValue;
           break; 
       }  
@@ -92,18 +83,13 @@ export class TokyoFiltersComponent implements OnInit {
           break;
       }  
     }
-
+    
     this.filterNotices();
   }
 
   filterNotices() {
-    this.noticeService.getNotices()
-      .then(notices => {
-        this.notices = notices.filter(notice => { 
-          return this.isNeedShow(notice); 
-        });
-      }) // фильтруем
-      .then(() => { this.filteredNoticesEmitter.emit(this.notices); }); // испускаем событие, в котором передаем отфильтрованный массив для pin-map
+    let filteredNotices = this.notices.filter(notice => { return this.isNeedShow(notice); }); // фильтруем
+    this.filteredNoticesEmitter.emit(filteredNotices);  // испускаем событие и передаем отфильтрованные нотисы
   }
 
   isNeedShow(notice) {
@@ -120,8 +106,9 @@ export class TokyoFiltersComponent implements OnInit {
   }
 
   checkSelectValue(selectedValue, noticeParam) {
-    if (selectedValue !== 'any') {
-      if (selectedValue !== String(noticeParam)) {
+    let noticeStringParam = noticeParam.toString();
+    if (selectedValue !== "any") {
+      if (selectedValue !== noticeStringParam) {
         return false;
       }
     }
