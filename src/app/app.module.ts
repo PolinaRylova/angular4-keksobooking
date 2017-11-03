@@ -35,6 +35,7 @@ import { FormNoticeDescriptionComponent } from './form-notice-description/form-n
 import { FormNoticeAddressComponent } from './form-notice-address/form-notice-address.component';
 import { FormNoticeCheckinCheckoutComponent } from './form-notice-checkin-checkout/form-notice-checkin-checkout.component';
 import { FormNoticeFeaturesComponent } from './form-notice-features/form-notice-features.component';
+import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-photos.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { FormNoticeFeaturesComponent } from './form-notice-features/form-notice-
     FormNoticeDescriptionComponent,
     FormNoticeAddressComponent,
     FormNoticeCheckinCheckoutComponent,
-    FormNoticeFeaturesComponent
+    FormNoticeFeaturesComponent,
+    FormNoticePhotosComponent
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
