@@ -30,6 +30,7 @@ import { FormLeftPanelComponent } from './form-left-panel/form-left-panel.compon
 import { FormRightPanelComponent } from './form-right-panel/form-right-panel.component';
 import { FormNoticeTitleComponent } from './form-notice-title/form-notice-title.component';
 import { FormNoticeTypePriceComponent } from './form-notice-type-price/form-notice-type-price.component';
+import { FormNoticeRoomsGuestsComponent } from './form-notice-rooms-guests/form-notice-rooms-guests.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { FormNoticeTypePriceComponent } from './form-notice-type-price/form-noti
     FormLeftPanelComponent,
     FormRightPanelComponent,
     FormNoticeTitleComponent,
-    FormNoticeTypePriceComponent
+    FormNoticeTypePriceComponent,
+    FormNoticeRoomsGuestsComponent
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
