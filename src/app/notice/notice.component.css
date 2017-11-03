@@ -1,0 +1,11 @@
+.notice__title {
+    font-family: Roboto, serif;
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 28px;
+    margin-bottom: 20px;
+}
+
+notice-header {
+    display: block;
+}
