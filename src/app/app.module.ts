@@ -33,6 +33,7 @@ import { FormNoticeTypePriceComponent } from './form-notice-type-price/form-noti
 import { FormNoticeRoomsGuestsComponent } from './form-notice-rooms-guests/form-notice-rooms-guests.component';
 import { FormNoticeDescriptionComponent } from './form-notice-description/form-notice-description.component';
 import { FormNoticeAddressComponent } from './form-notice-address/form-notice-address.component';
+import { FormNoticeCheckinCheckoutComponent } from './form-notice-checkin-checkout/form-notice-checkin-checkout.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { FormNoticeAddressComponent } from './form-notice-address/form-notice-ad
     FormNoticeTypePriceComponent,
     FormNoticeRoomsGuestsComponent,
     FormNoticeDescriptionComponent,
-    FormNoticeAddressComponent
+    FormNoticeAddressComponent,
+    FormNoticeCheckinCheckoutComponent
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
