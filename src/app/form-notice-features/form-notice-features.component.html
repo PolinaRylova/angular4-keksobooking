@@ -1,0 +1,7 @@
+<label>Удобства: wi-fi, кухня, парковка, стиралка, лифт, кондиционер</label>
+<fieldset class="form__bottom-element form__notice-features" id="features" name="features">
+  <label class="feature" *ngFor="let feature of features">
+    <input type="checkbox" name="features" value="{{ feature }}" class="feature__input">
+    <span class="feature__image feature__image--{{ feature}}"></span>
+  </label>
+</fieldset>

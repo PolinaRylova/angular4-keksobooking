@@ -34,6 +34,7 @@ import { FormNoticeRoomsGuestsComponent } from './form-notice-rooms-guests/form-
 import { FormNoticeDescriptionComponent } from './form-notice-description/form-notice-description.component';
 import { FormNoticeAddressComponent } from './form-notice-address/form-notice-address.component';
 import { FormNoticeCheckinCheckoutComponent } from './form-notice-checkin-checkout/form-notice-checkin-checkout.component';
+import { FormNoticeFeaturesComponent } from './form-notice-features/form-notice-features.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { FormNoticeCheckinCheckoutComponent } from './form-notice-checkin-checko
     FormNoticeRoomsGuestsComponent,
     FormNoticeDescriptionComponent,
     FormNoticeAddressComponent,
-    FormNoticeCheckinCheckoutComponent
+    FormNoticeCheckinCheckoutComponent,
+    FormNoticeFeaturesComponent
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
