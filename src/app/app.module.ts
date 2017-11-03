@@ -27,6 +27,7 @@ import { TokyoOfferDialogComponent } from './tokyo-offer-dialog/tokyo-offer-dial
 import { NoticeHeaderComponent } from './notice-header/notice-header.component';
 import { NoticeFormComponent } from './notice-form/notice-form.component';
 import { FormLeftPanelComponent } from './form-left-panel/form-left-panel.component';
+import { FormRightPanelComponent } from './form-right-panel/form-right-panel.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { FormLeftPanelComponent } from './form-left-panel/form-left-panel.compon
     TokyoOfferDialogComponent,
     NoticeHeaderComponent,
     NoticeFormComponent,
-    FormLeftPanelComponent
+    FormLeftPanelComponent,
+    FormRightPanelComponent
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
