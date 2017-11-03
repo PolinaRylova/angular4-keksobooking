@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormNoticeCheckinCheckoutComponent implements OnInit {
 
+  times: string[] = ['12:00', '13:00', '14:00'];
+
   constructor() { }
 
   ngOnInit() {
