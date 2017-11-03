@@ -1,43 +1,40 @@
+<form-notice-title class="form__element form__element--wide"></form-notice-title>
+<div class="form__row">
+  <div class="form__element">
+    <label for="type">Тип жилья</label>
+    <select class="form__bottom-element" id="type" name="type">
+      <option value="flat" selected>Квартира</option>
+      <option value="bungalo">Лачуга</option>
+      <option value="house">Дом</option>
+      <option value="palace">Дворец</option>
+    </select>
+  </div>
+  <div class="form__element">
+    <label for="price">Цена за ночь, руб.</label>
+    <input class="form__bottom-element" id="price" name="price" type="number" placeholder="1000" min="1000" max="1000000" required>
+  </div>
+</div>
+<div class="form__row">
+  <div class="form__element">
+    <label for="room_number">Кол-во комнат</label>
+    <select class="form__bottom-element" id="room_number" name="rooms">
+      <option value="1" selected>1 комната</option>
+      <option value="2">2 комнаты</option>
+      <option value="3">3 комнаты</option>
+      <option value="100">100 комнат</option>
+    </select>
+  </div>
+  <div class="form__element">
+    <label for="capacity">Количество мест</label>
+    <select class="form__bottom-element" id="capacity" name="capacity">
+      <option value="3">для 3 гостей</option>
+      <option value="2">для 2 гостей</option>
+      <option value="1" selected>для 1 гостя</option>
+      <option value="0">не для гостей</option>
+    </select>
+  </div>
+</div>
 <div class="form__element  form__element--wide">
-    <label for="title">Заголовок объявления</label>
-    <input id="title" name="title" type="text" placeholder="Милая, уютная квартирка, например" minlength="30" maxlength="100" required>
-  </div>
-  <div class="form__row">
-    <div class="form__element">
-      <label for="type">Тип жилья</label>
-      <select id="type" name="type">
-        <option value="flat" selected>Квартира</option>
-        <option value="bungalo">Лачуга</option>
-        <option value="house">Дом</option>
-        <option value="palace">Дворец</option>
-      </select>
-    </div>
-    <div class="form__element">
-      <label for="price">Цена за ночь, руб.</label>
-      <input id="price" name="price" type="number" placeholder="1000" min="1000" max="1000000" required>
-    </div>
-  </div>
-  <div class="form__row">
-    <div class="form__element">
-      <label for="room_number">Кол-во комнат</label>
-      <select id="room_number" name="rooms">
-        <option value="1" selected>1 комната</option>
-        <option value="2">2 комнаты</option>
-        <option value="3">3 комнаты</option>
-        <option value="100">100 комнат</option>
-      </select>
-    </div>
-    <div class="form__element">
-      <label for="capacity">Количество мест</label>
-      <select id="capacity" name="capacity">
-        <option value="3">для 3 гостей</option>
-        <option value="2">для 2 гостей</option>
-        <option value="1" selected>для 1 гостя</option>
-        <option value="0">не для гостей</option>
-      </select>
-    </div>
-  </div>
-  <div class="form__element  form__element--wide">
-    <label for="description">Описание (не обязательно)</label>
-    <textarea id="description" name="description" placeholder="Здесь расскажите о том, какое ваше жилье замечательное и вообще"></textarea>
-  </div>
+  <label for="description">Описание (не обязательно)</label>
+  <textarea class="form__bottom-element" id="description" name="description" placeholder="Здесь расскажите о том, какое ваше жилье замечательное и вообще"></textarea>
+</div>
