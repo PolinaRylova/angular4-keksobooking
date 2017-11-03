@@ -32,6 +32,7 @@ import { FormNoticeTitleComponent } from './form-notice-title/form-notice-title.
 import { FormNoticeTypePriceComponent } from './form-notice-type-price/form-notice-type-price.component';
 import { FormNoticeRoomsGuestsComponent } from './form-notice-rooms-guests/form-notice-rooms-guests.component';
 import { FormNoticeDescriptionComponent } from './form-notice-description/form-notice-description.component';
+import { FormNoticeAddressComponent } from './form-notice-address/form-notice-address.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { FormNoticeDescriptionComponent } from './form-notice-description/form-n
     FormNoticeTitleComponent,
     FormNoticeTypePriceComponent,
     FormNoticeRoomsGuestsComponent,
-    FormNoticeDescriptionComponent
+    FormNoticeDescriptionComponent,
+    FormNoticeAddressComponent
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
