@@ -26,6 +26,7 @@ import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
 import { TokyoOfferDialogComponent } from './tokyo-offer-dialog/tokyo-offer-dialog.component';
 import { NoticeHeaderComponent } from './notice-header/notice-header.component';
 import { NoticeFormComponent } from './notice-form/notice-form.component';
+import { FormLeftPanelComponent } from './form-left-panel/form-left-panel.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { NoticeFormComponent } from './notice-form/notice-form.component';
     TokyoPinMapComponent,
     TokyoOfferDialogComponent,
     NoticeHeaderComponent,
-    NoticeFormComponent
+    NoticeFormComponent,
+    FormLeftPanelComponent
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
