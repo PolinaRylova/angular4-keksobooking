@@ -67,22 +67,58 @@ export class TokyoFiltersComponent {
     } else {
       switch (event.target.value) {
         case 'wifi':
-          this.wifi.checked = true;
+        {
+          if (this.wifi.checked) {
+            this.wifi.checked = false;
+          } else {
+            this.wifi.checked = true;
+          }
+        }
           break;
         case 'dishwasher':
-          this.dishwasher.checked = true;
+        {
+          if (this.dishwasher.checked) {
+            this.dishwasher.checked = false;
+          } else {
+            this.dishwasher.checked = true;
+          }
+        }
           break;
         case 'parking':
-          this.parking.checked = true;
+        {
+          if (this.parking.checked) {
+            this.parking.checked = false;
+          } else {
+            this.parking.checked = true;
+          }
+        }
           break;
         case 'washer':
-          this.washer.checked = true;
+        {
+          if (this.washer.checked) {
+            this.washer.checked = false;
+          } else {
+            this.washer.checked = true;
+          }
+        }
           break;
         case 'elevator':
-          this.elevator.checked = true;
+        {
+          if (this.elevator.checked) {
+            this.elevator.checked = false;
+          } else {
+            this.elevator.checked = true;
+          }
+        }
           break;
         case 'conditioner':
-          this.conditioner.checked = true;
+        {
+          if (this.conditioner.checked) {
+            this.conditioner.checked = false;
+          } else {
+            this.conditioner.checked = true;
+          }
+        }
           break;
       }
     }
