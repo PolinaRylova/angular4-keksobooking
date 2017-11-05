@@ -4,20 +4,20 @@ import { Notice } from '../notice/notice';
 import { NoticeService } from '../notice/notice.service';
 
 @Component({
-  selector: 'tokyo',
-  templateUrl: './tokyo.component.html',
-  styleUrls: ['./tokyo.component.css']
+  selector: 'app-tokyo',
+  templateUrl: './app-tokyo.component.html',
+  styleUrls: ['./app-tokyo.component.css']
 })
-export class TokyoComponent {
+export class AppTokyoComponent implements OnInit {
 
   noticesFromServer: Notice[];
   noticesToShow: Notice[];
   selectedNotice: Notice;
 
-  @Output() selectedEmitter = new EventEmitter<Notice>();  
+  @Output() selectedEmitter = new EventEmitter<Notice>();
 
   constructor(private noticeService: NoticeService) { }
-  
+
   ngOnInit(): void {
     this.noticeService.getNotices()
       .then(notices => {

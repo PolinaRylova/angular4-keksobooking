@@ -7,7 +7,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
-import { TokyoComponent } from './tokyo/tokyo.component';
+import { AppTokyoComponent } from './app-tokyo/app-tokyo.component';
 import { NoticeComponent } from './notice/notice.component';
 import { AppMainComponent } from './app-main/app-main.component';
 import { TokyoFiltersComponent } from './tokyo-filters/tokyo-filters.component';
@@ -48,7 +48,7 @@ import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-phot
     AppComponent,
     AppHeaderComponent,
     AppFooterComponent,
-    TokyoComponent,
+    AppTokyoComponent,
     NoticeComponent,
     AppMainComponent,
     TokyoFiltersComponent,
