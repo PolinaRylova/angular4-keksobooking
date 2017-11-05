@@ -17,13 +17,16 @@ export class TokyoFiltersComponent {
   housingPrice: string = 'any';
   housingRooms: any = 'any';
   housingGuests: any = 'any';
+
+  filterSet: string[] = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
+
   wifi = {
     'name': 'wifi',
     'checked': false
   };
   dishwasher = {
     'name': 'dishwasher',
-    "checked": false
+    'checked': false
   };
   parking = {
     'name': 'parking',

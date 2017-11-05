@@ -4,11 +4,9 @@
     <house-rooms></house-rooms>
     <house-guests></house-guests>
     <fieldset id="housing_features" class="tokyo__filter-set">
-      <house-wifi></house-wifi>
-      <house-dishwasher></house-dishwasher>
-      <house-parking></house-parking>
-      <house-washer></house-washer>
-      <house-elevator></house-elevator>
-      <house-conditioner></house-conditioner>
+      <label *ngFor="let filter of filterSet" class="filter-set__feature">
+        <input type="checkbox" name="feature" value="{{ filter }}" class="feature__input">
+        <span class="feature__image feature__image--{{ filter }}"></span>
+      </label>
     </fieldset>
 </form>

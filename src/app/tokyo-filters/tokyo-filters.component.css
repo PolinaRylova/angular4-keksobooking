@@ -14,3 +14,32 @@
     display: inline;
 }
 
+.feature__image--wifi {
+  background-position: 1px -118px;
+}
+
+.feature__image--dishwasher {
+  background-position: 0 1px;
+}
+
+.feature__image--parking {
+  background-position: 2px -70px;
+}
+
+.feature__image--washer {
+  background-position: 2px -94px;
+}
+
+.feature__image--elevator {
+  background-position: 2px -22px;
+}
+
+.feature__image--conditioner {
+  background-position: 2px -46px;
+}
+
+.filter-set__feature:last-child {
+  margin-right: 0;
+}
+
+

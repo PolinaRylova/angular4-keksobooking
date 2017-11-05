@@ -15,12 +15,6 @@ import { HouseTypeComponent } from './house-type/house-type.component';
 import { HousePriceComponent } from './house-price/house-price.component';
 import { HouseRoomsComponent } from './house-rooms/house-rooms.component';
 import { HouseGuestsComponent } from './house-guests/house-guests.component';
-import { HouseWifiComponent } from './house-wifi/house-wifi.component';
-import { HouseDishwasherComponent } from './house-dishwasher/house-dishwasher.component';
-import { HouseParkingComponent } from './house-parking/house-parking.component';
-import { HouseWasherComponent } from './house-washer/house-washer.component';
-import { HouseElevatorComponent } from './house-elevator/house-elevator.component';
-import { HouseConditionerComponent } from './house-conditioner/house-conditioner.component';
 import { NoticeService } from './app-notice/notice.service';
 import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
 import { TokyoOfferDialogComponent } from './tokyo-offer-dialog/tokyo-offer-dialog.component';
@@ -56,12 +50,6 @@ import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-phot
     HousePriceComponent,
     HouseRoomsComponent,
     HouseGuestsComponent,
-    HouseWifiComponent,
-    HouseDishwasherComponent,
-    HouseParkingComponent,
-    HouseWasherComponent,
-    HouseElevatorComponent,
-    HouseConditionerComponent,
     TokyoPinMapComponent,
     TokyoOfferDialogComponent,
     NoticeHeaderComponent,
