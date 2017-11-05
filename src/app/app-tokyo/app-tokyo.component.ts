@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
-import { Notice } from '../notice/notice';
-import { NoticeService } from '../notice/notice.service';
+import { Notice } from '../app-notice/notice';
+import { NoticeService } from '../app-notice/notice.service';
 
 @Component({
   selector: 'app-tokyo',

@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { NgStyle } from '@angular/common';
 
-import { Notice } from '../notice/notice';
+import { Notice } from '../app-notice/notice';
 
 @Component({
   selector: 'tokyo-pin-map',

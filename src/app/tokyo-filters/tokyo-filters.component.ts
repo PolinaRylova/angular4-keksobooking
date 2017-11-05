@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Notice } from '../notice/notice';
+import { Notice } from '../app-notice/notice';
 
 @Component({
   selector: 'tokyo-filters',
@@ -42,7 +42,7 @@ export class TokyoFiltersComponent {
     "checked": false
   };
 
-  constructor() { }  
+  constructor() { }
 
   saveFilterValues(event) {
     let filterValue: any = event.target.value;
@@ -59,8 +59,8 @@ export class TokyoFiltersComponent {
           break;
         case 'housing_guests':
           this.housingGuests = filterValue;
-          break; 
-      }  
+          break;
+      }
     } else {
       switch (event.target.value) {
         case 'wifi':
@@ -74,16 +74,16 @@ export class TokyoFiltersComponent {
           break;
         case 'washer':
           this.washer.checked = true;
-          break; 
+          break;
         case 'elevator':
           this.elevator.checked = true;
           break;
         case 'conditioner':
           this.conditioner.checked = true;
           break;
-      }  
+      }
     }
-    
+
     this.filterNotices();
   }
 

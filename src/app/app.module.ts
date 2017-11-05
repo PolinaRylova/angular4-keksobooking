@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AppTokyoComponent } from './app-tokyo/app-tokyo.component';
-import { NoticeComponent } from './notice/notice.component';
+import { AppNoticeComponent } from './app-notice/app-notice.component';
 import { AppMainComponent } from './app-main/app-main.component';
 import { TokyoFiltersComponent } from './tokyo-filters/tokyo-filters.component';
 import { HouseTypeComponent } from './house-type/house-type.component';
@@ -21,7 +21,7 @@ import { HouseParkingComponent } from './house-parking/house-parking.component';
 import { HouseWasherComponent } from './house-washer/house-washer.component';
 import { HouseElevatorComponent } from './house-elevator/house-elevator.component';
 import { HouseConditionerComponent } from './house-conditioner/house-conditioner.component';
-import { NoticeService } from './notice/notice.service';
+import { NoticeService } from './app-notice/notice.service';
 import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
 import { TokyoOfferDialogComponent } from './tokyo-offer-dialog/tokyo-offer-dialog.component';
 import { NoticeHeaderComponent } from './notice-header/notice-header.component';
@@ -49,7 +49,7 @@ import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-phot
     AppHeaderComponent,
     AppFooterComponent,
     AppTokyoComponent,
-    NoticeComponent,
+    AppNoticeComponent,
     AppMainComponent,
     TokyoFiltersComponent,
     HouseTypeComponent,
