@@ -11,10 +11,6 @@ import { AppTokyoComponent } from './app-tokyo/app-tokyo.component';
 import { AppNoticeComponent } from './app-notice/app-notice.component';
 import { AppMainComponent } from './app-main/app-main.component';
 import { TokyoFiltersComponent } from './tokyo-filters/tokyo-filters.component';
-import { HouseTypeComponent } from './house-type/house-type.component';
-import { HousePriceComponent } from './house-price/house-price.component';
-import { HouseRoomsComponent } from './house-rooms/house-rooms.component';
-import { HouseGuestsComponent } from './house-guests/house-guests.component';
 import { NoticeService } from './app-notice/notice.service';
 import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
 import { TokyoOfferDialogComponent } from './tokyo-offer-dialog/tokyo-offer-dialog.component';
@@ -46,10 +42,6 @@ import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-phot
     AppNoticeComponent,
     AppMainComponent,
     TokyoFiltersComponent,
-    HouseTypeComponent,
-    HousePriceComponent,
-    HouseRoomsComponent,
-    HouseGuestsComponent,
     TokyoPinMapComponent,
     TokyoOfferDialogComponent,
     NoticeHeaderComponent,

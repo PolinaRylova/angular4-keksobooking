@@ -18,116 +18,153 @@ export class TokyoFiltersComponent {
   housingRooms: any = 'any';
   housingGuests: any = 'any';
 
-  filterSet: string[] = ['wifi', 'dishwasher', 'parking', 'washer', 'elevator', 'conditioner'];
+  selectFilters = [
+    {
+      'name': 'htypes',
+      'options': [
+        {
+          'key': 'any',
+          'value': 'Любой тип жилья'
+        },
+        {
+          'key': 'flat',
+          'value': 'Квартира'
+        },
+        {
+          'key': 'house',
+          'value': 'Дом'
+        },
+        {
+          'key': 'bungalo',
+          'value': 'Сарай'
+        }
+      ]
+    },
+    {
+      'name': 'hprices',
+      'options': [
+        {
+          'key': 'any',
+          'value': 'Любая'
+        },
+        {
+          'key': 'middle',
+          'value': '10000 - 50000 ₽'
+        },
+        {
+          'key': 'low',
+          'value': 'до 10000 ₽'
+        },
+        {
+          'key': 'high',
+          'value': 'от 50000 ₽'
+        }
+      ]
+    },
+    {
+      'name': 'hrooms',
+      'options': [
+        {
+          'key': 'any',
+          'value': 'Любое число комнат'
+        },
+        {
+          'key': '1',
+          'value': 'Одна комната'
+        },
+        {
+          'key': '2',
+          'value': 'Две комнаты'
+        },
+        {
+          'key': '3',
+          'value': 'Три комнаты'
+        }
+      ]
+    },
+    {
+      'name': 'hguests',
+      'options': [
+        {
+          'key': 'any',
+          'value': 'Любое число гостей'
+        },
+        {
+          'key': '1',
+          'value': 'Один гость'
+        },
+        {
+          'key': '2',
+          'value': 'Два гостя'
+        }
+      ]
+    }
+  ];
 
-  wifi = {
-    'name': 'wifi',
-    'checked': false
-  };
-  dishwasher = {
-    'name': 'dishwasher',
-    'checked': false
-  };
-  parking = {
-    'name': 'parking',
-    'checked': false
-  };
-  washer = {
-    'name': 'washer',
-    'checked': false
-  };
-  elevator = {
-    'name': 'elevator',
-    'checked': false
-  };
-  conditioner = {
-    'name': 'conditioner',
-    'checked': false
-  };
+  filterSet = [
+    {
+      'name': 'wifi',
+      'checked': false
+    },
+    {
+      'name': 'dishwasher',
+      'checked': false
+    },
+    {
+      'name': 'parking',
+      'checked': false
+    },
+    {
+      'name': 'washer',
+      'checked': false
+    },
+    {
+      'name': 'elevator',
+      'checked': false
+    },
+    {
+      'name': 'conditioner',
+      'checked': false
+    }
+  ];
 
   constructor() { }
 
   saveFilterValues(event) {
-    let filterValue: any = event.target.value;
-    if (event.target.id) {
-      switch (event.target.id) {
-        case 'housing_type':
-          this.housingType = filterValue;
-          break;
-        case 'housing_price':
-          this.housingPrice = filterValue;
-          break;
-        case 'housing_rooms':
-          this.housingRooms = filterValue;
-          break;
-        case 'housing_guests':
-          this.housingGuests = filterValue;
-          break;
-      }
-    } else {
-      switch (event.target.value) {
-        case 'wifi':
-        {
-          if (this.wifi.checked) {
-            this.wifi.checked = false;
-          } else {
-            this.wifi.checked = true;
+    const filterValue: any = event.target.value;
+
+    switch (event.target.id) {
+      case 'htypes':
+        this.housingType = filterValue;
+        break;
+      case 'hprices':
+        this.housingPrice = filterValue;
+        break;
+      case 'hrooms':
+        this.housingRooms = filterValue;
+        break;
+      case 'hguests':
+        this.housingGuests = filterValue;
+        break;
+      case 'wifi':
+      case 'dishwasher':
+      case 'parking':
+      case 'washer':
+      case 'elevator':
+      case 'conditioner':
+        this.filterSet.forEach(function (object) {
+          if (object.name === event.target.id) {
+            object.checked = !object.checked;
           }
-        }
-          break;
-        case 'dishwasher':
-        {
-          if (this.dishwasher.checked) {
-            this.dishwasher.checked = false;
-          } else {
-            this.dishwasher.checked = true;
-          }
-        }
-          break;
-        case 'parking':
-        {
-          if (this.parking.checked) {
-            this.parking.checked = false;
-          } else {
-            this.parking.checked = true;
-          }
-        }
-          break;
-        case 'washer':
-        {
-          if (this.washer.checked) {
-            this.washer.checked = false;
-          } else {
-            this.washer.checked = true;
-          }
-        }
-          break;
-        case 'elevator':
-        {
-          if (this.elevator.checked) {
-            this.elevator.checked = false;
-          } else {
-            this.elevator.checked = true;
-          }
-        }
-          break;
-        case 'conditioner':
-        {
-          if (this.conditioner.checked) {
-            this.conditioner.checked = false;
-          } else {
-            this.conditioner.checked = true;
-          }
-        }
-          break;
-      }
+        });
+        break;
     }
 
     this.filterNotices();
   }
 
   filterNotices() {
-    let filteredNotices = this.notices.filter(notice => { return this.isNeedShow(notice); }); // фильтруем
+    const filteredNotices = this.notices.filter(notice => { return this.isNeedShow(notice); }); // фильтруем
     this.filteredNoticesEmitter.emit(filteredNotices);  // испускаем событие и передаем отфильтрованные нотисы
   }
 
@@ -136,12 +173,12 @@ export class TokyoFiltersComponent {
     this.checkSelectValue(this.housingRooms, notice.offer.rooms) &&
     this.checkSelectValue(this.housingGuests, notice.offer.guests) &&
     this.checkPriceInDiapason(this.housingPrice, notice.offer.price) &&
-    this.checkCheckedValue(this.wifi, notice.offer.features) &&
-    this.checkCheckedValue(this.dishwasher, notice.offer.features) &&
-    this.checkCheckedValue(this.parking, notice.offer.features) &&
-    this.checkCheckedValue(this.washer, notice.offer.features) &&
-    this.checkCheckedValue(this.elevator, notice.offer.features) &&
-    this.checkCheckedValue(this.conditioner, notice.offer.features);
+    this.checkCheckedValue(this.filterSet[0], notice.offer.features) &&
+    this.checkCheckedValue(this.filterSet[1], notice.offer.features) &&
+    this.checkCheckedValue(this.filterSet[2], notice.offer.features) &&
+    this.checkCheckedValue(this.filterSet[3], notice.offer.features) &&
+    this.checkCheckedValue(this.filterSet[4], notice.offer.features) &&
+    this.checkCheckedValue(this.filterSet[5], notice.offer.features);
   }
 
   checkSelectValue(selectedValue, noticeParam) {

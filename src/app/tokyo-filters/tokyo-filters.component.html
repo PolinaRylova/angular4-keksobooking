@@ -1,12 +1,13 @@
 <form action="#" class="tokyo__filters" autocomplete="off" (change)="saveFilterValues($event)">
-    <house-type></house-type>
-    <house-price></house-price>
-    <house-rooms></house-rooms>
-    <house-guests></house-guests>
-    <fieldset id="housing_features" class="tokyo__filter-set">
-      <label *ngFor="let filter of filterSet" class="filter-set__feature">
-        <input type="checkbox" name="feature" value="{{ filter }}" class="feature__input">
-        <span class="feature__image feature__image--{{ filter }}"></span>
-      </label>
-    </fieldset>
+  <label *ngFor="let selectFilter of selectFilters">
+    <select name="{{ selectFilter.name }}" id="{{ selectFilter.name }}" class="tokyo__filter">
+      <option *ngFor="let option of selectFilter.options" [value]="option.key">{{option.value}}</option>
+    </select>
+  </label>
+  <fieldset id="housing_features" class="tokyo__filter-set">
+    <label *ngFor="let filter of filterSet" class="filter-set__feature">
+      <input type="checkbox" name="feature" value="{{ filter.name }}" id="{{ filter.name }}" class="feature__input">
+      <span class="feature__image feature__image--{{ filter.name }}"></span>
+    </label>
+  </fieldset>
 </form>
