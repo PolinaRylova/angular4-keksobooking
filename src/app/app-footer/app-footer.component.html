@@ -3,9 +3,6 @@
         Сделано в <a tabindex="0" href="https://htmlacademy.ru" class="footer-link footer-logo-link"><img src="./assets/img/ha-logo.png" class="footer-logo-image" width="130" alt="HTML Academy"/>HTML Academy</a> &copy; 2017
     </div>
     <nav class="footer-social">
-        <a href="https://twitter.com/htmlacademy_ru" class="footer-link footer-social-item footer-social-item-twitter" target="_blank" rel="nofollow">Twitter</a>
-        <a href="https://www.instagram.com/htmlacademy/" class="footer-link footer-social-item footer-social-item-instagram" target="_blank" rel="nofollow">Instagtam</a>
-        <a href="https://www.facebook.com/htmlacademy" class="footer-link footer-social-item footer-social-item-facebook" target="_blank" rel="nofollow">Facebook</a>
-        <a href="https://vk.com/htmlacademy" class="footer-link footer-social-item footer-social-item-vk" target="_blank" rel="nofollow">VK</a>
+        <a *ngFor="let link of socialLinks" href="{{ link.address }}" class="footer-link footer-social-item footer-social-item-{{ link.name }}" target="_blank" rel="nofollow">{{ link.text }}</a>
     </nav>
 </div>

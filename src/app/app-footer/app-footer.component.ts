@@ -7,6 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppFooterComponent implements OnInit {
 
+  socialLinks = [
+    {
+      'address': 'https://twitter.com/htmlacademy_ru',
+      'name': 'twitter',
+      'text': 'Twitter'
+    },
+    {
+      'address': 'https://www.instagram.com/htmlacademy/',
+      'name': 'instagram',
+      'text': 'Instagtam'
+    },
+    {
+      'address': 'https://www.facebook.com/htmlacademy',
+      'name': 'facebook',
+      'text': 'Facebook'
+    },
+    {
+      'address': 'https://vk.com/htmlacademy',
+      'name': 'vk',
+      'text': 'VK'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

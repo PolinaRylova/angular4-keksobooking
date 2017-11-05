@@ -13,33 +13,33 @@ export class TokyoFiltersComponent {
   @Input() notices: Notice[];
   @Output() filteredNoticesEmitter = new EventEmitter<Notice[]>();
 
-  housingType: string = "any";
-  housingPrice: string = "any";
-  housingRooms: any = "any";
-  housingGuests: any = "any";
+  housingType: string = 'any';
+  housingPrice: string = 'any';
+  housingRooms: any = 'any';
+  housingGuests: any = 'any';
   wifi = {
-    "name": "wifi",
-    "checked": false
+    'name': 'wifi',
+    'checked': false
   };
   dishwasher = {
-    "name": "dishwasher",
+    'name': 'dishwasher',
     "checked": false
   };
   parking = {
-    "name": "parking",
-    "checked": false
+    'name': 'parking',
+    'checked': false
   };
   washer = {
-    "name": "washer",
-    "checked": false
+    'name': 'washer',
+    'checked': false
   };
   elevator = {
-    "name": "elevator",
-    "checked": false
+    'name': 'elevator',
+    'checked': false
   };
   conditioner = {
-    "name": "conditioner",
-    "checked": false
+    'name': 'conditioner',
+    'checked': false
   };
 
   constructor() { }
@@ -48,7 +48,7 @@ export class TokyoFiltersComponent {
     let filterValue: any = event.target.value;
     if (event.target.id) {
       switch (event.target.id) {
-        case "housing_type":
+        case 'housing_type':
           this.housingType = filterValue;
           break;
         case 'housing_price':
@@ -107,7 +107,7 @@ export class TokyoFiltersComponent {
 
   checkSelectValue(selectedValue, noticeParam) {
     let noticeStringParam = noticeParam.toString();
-    if (selectedValue !== "any") {
+    if (selectedValue !== 'any') {
       if (selectedValue !== noticeStringParam) {
         return false;
       }
