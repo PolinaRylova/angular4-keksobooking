@@ -5,11 +5,11 @@ import { NgStyle } from '@angular/common';
 import { Notice } from '../app-notice/notice';
 
 @Component({
-  selector: 'tokyo-pin-map',
-  templateUrl: './tokyo-pin-map.component.html',
-  styleUrls: ['./tokyo-pin-map.component.css']
+  selector: 'app-tokyo-pin-map',
+  templateUrl: './app-tokyo-pin-map.component.html',
+  styleUrls: ['./app-tokyo-pin-map.component.css']
 })
-export class TokyoPinMapComponent {
+export class AppTokyoPinMapComponent {
 
   @Input() notices: Notice[];
   @Input() selectedNotice: Notice;

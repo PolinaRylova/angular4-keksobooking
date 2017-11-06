@@ -12,7 +12,7 @@ import { AppNoticeComponent } from './app-notice/app-notice.component';
 import { AppMainComponent } from './app-main/app-main.component';
 import { AppTokyoFiltersComponent } from './app-tokyo-filters/app-tokyo-filters.component';
 import { NoticeService } from './app-notice/notice.service';
-import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
+import { AppTokyoPinMapComponent } from './app-tokyo-pin-map/app-tokyo-pin-map.component';
 import { TokyoOfferDialogComponent } from './tokyo-offer-dialog/tokyo-offer-dialog.component';
 import { AppNoticeHeaderComponent } from './app-notice-header/app-notice-header.component';
 import { AppNoticeFormComponent } from './app-notice-form/app-notice-form.component';
@@ -42,7 +42,7 @@ import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-phot
     AppNoticeComponent,
     AppMainComponent,
     AppTokyoFiltersComponent,
-    TokyoPinMapComponent,
+    AppTokyoPinMapComponent,
     TokyoOfferDialogComponent,
     AppNoticeHeaderComponent,
     AppNoticeFormComponent,

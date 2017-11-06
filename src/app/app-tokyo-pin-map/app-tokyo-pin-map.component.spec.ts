@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TokyoPinMapComponent } from './tokyo-pin-map.component';
+import { AppTokyoPinMapComponent } from './app-tokyo-pin-map.component';
 
-describe('TokyoPinMapComponent', () => {
-  let component: TokyoPinMapComponent;
-  let fixture: ComponentFixture<TokyoPinMapComponent>;
+describe('AppTokyoPinMapComponent', () => {
+  let component: AppTokyoPinMapComponent;
+  let fixture: ComponentFixture<AppTokyoPinMapComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TokyoPinMapComponent ]
+      declarations: [ AppTokyoPinMapComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TokyoPinMapComponent);
+    fixture = TestBed.createComponent(AppTokyoPinMapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
