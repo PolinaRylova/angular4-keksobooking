@@ -10,7 +10,7 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AppTokyoComponent } from './app-tokyo/app-tokyo.component';
 import { AppNoticeComponent } from './app-notice/app-notice.component';
 import { AppMainComponent } from './app-main/app-main.component';
-import { TokyoFiltersComponent } from './tokyo-filters/tokyo-filters.component';
+import { AppTokyoFiltersComponent } from './app-tokyo-filters/app-tokyo-filters.component';
 import { NoticeService } from './app-notice/notice.service';
 import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
 import { TokyoOfferDialogComponent } from './tokyo-offer-dialog/tokyo-offer-dialog.component';
@@ -41,7 +41,7 @@ import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-phot
     AppTokyoComponent,
     AppNoticeComponent,
     AppMainComponent,
-    TokyoFiltersComponent,
+    AppTokyoFiltersComponent,
     TokyoPinMapComponent,
     TokyoOfferDialogComponent,
     AppNoticeHeaderComponent,

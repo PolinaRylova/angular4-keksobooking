@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TokyoFiltersComponent } from './tokyo-filters.component';
+import { AppTokyoFiltersComponent } from './app-tokyo-filters.component';
 
-describe('TokyoFiltersComponent', () => {
-  let component: TokyoFiltersComponent;
-  let fixture: ComponentFixture<TokyoFiltersComponent>;
+describe('AppTokyoFiltersComponent', () => {
+  let component: AppTokyoFiltersComponent;
+  let fixture: ComponentFixture<AppTokyoFiltersComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TokyoFiltersComponent ]
+      declarations: [ AppTokyoFiltersComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TokyoFiltersComponent);
+    fixture = TestBed.createComponent(AppTokyoFiltersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

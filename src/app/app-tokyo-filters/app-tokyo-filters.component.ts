@@ -3,12 +3,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Notice } from '../app-notice/notice';
 
 @Component({
-  selector: 'tokyo-filters',
-  templateUrl: './tokyo-filters.component.html',
-  styleUrls: ['./tokyo-filters.component.css']
+  selector: 'app-tokyo-filters',
+  templateUrl: './app-tokyo-filters.component.html',
+  styleUrls: ['./app-tokyo-filters.component.css']
 })
 
-export class TokyoFiltersComponent {
+export class AppTokyoFiltersComponent {
 
   @Input() notices: Notice[];
   @Output() filteredNoticesEmitter = new EventEmitter<Notice[]>();

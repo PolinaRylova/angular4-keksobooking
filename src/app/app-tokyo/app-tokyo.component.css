@@ -2,7 +2,7 @@ tokyo-pin-map {
     display: block;
 }
 
-tokyo-filters {
+app-tokyo-filters {
     width: 1200px;
     position: absolute;
     bottom: 0;
