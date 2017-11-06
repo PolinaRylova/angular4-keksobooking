@@ -15,7 +15,7 @@ import { NoticeService } from './app-notice/notice.service';
 import { TokyoPinMapComponent } from './tokyo-pin-map/tokyo-pin-map.component';
 import { TokyoOfferDialogComponent } from './tokyo-offer-dialog/tokyo-offer-dialog.component';
 import { AppNoticeHeaderComponent } from './app-notice-header/app-notice-header.component';
-import { NoticeFormComponent } from './notice-form/notice-form.component';
+import { AppNoticeFormComponent } from './app-notice-form/app-notice-form.component';
 import { FormLeftPanelComponent } from './form-left-panel/form-left-panel.component';
 import { FormRightPanelComponent } from './form-right-panel/form-right-panel.component';
 import { FormNoticeTitleComponent } from './form-notice-title/form-notice-title.component';
@@ -45,7 +45,7 @@ import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-phot
     TokyoPinMapComponent,
     TokyoOfferDialogComponent,
     AppNoticeHeaderComponent,
-    NoticeFormComponent,
+    AppNoticeFormComponent,
     FormLeftPanelComponent,
     FormRightPanelComponent,
     FormNoticeTitleComponent,

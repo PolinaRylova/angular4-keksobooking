@@ -6,6 +6,6 @@
     margin-bottom: 20px;
 }
 
-app-notice-header, notice-form {
+app-notice-header, app-notice-form {
     display: block;
 }
