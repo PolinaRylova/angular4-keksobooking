@@ -15,7 +15,7 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 29px; 
+    font-size: 29px;
 }
 
 fieldset {
@@ -78,7 +78,7 @@ input[type=text]:hover, input[type=number]:hover, select:hover, textarea:hover {
 
 input[type=text]:focus, input[type=number]:focus, select:focus, textarea:focus {
     outline: none;
-    box-shadow: 0 0 4px 1px #ff6547;
+    box-shadow: 0 0 4px 2px #ff6547;
 }
 
 .hidden {
@@ -107,6 +107,11 @@ input[type=text]:focus, input[type=number]:focus, select:focus, textarea:focus {
 .feature__input:checked + span {
     background-color: #ff6547;
     border-color: #ff6547;
+}
+
+.feature__input:focus + span {
+  outline: none;
+  box-shadow: 0 0 4px 2px #ff6547;
 }
 
 .feature__image {

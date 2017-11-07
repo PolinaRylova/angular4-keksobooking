@@ -9,6 +9,11 @@
     bottom: 0;
 }
 
+.dialog__close:focus {
+  outline: none;
+  box-shadow: 0 0 4px 2px #ff6547;
+}
+
 .dialog__panel {
     background-color: white;
 

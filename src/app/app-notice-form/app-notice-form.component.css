@@ -15,3 +15,8 @@
     display: block;
     margin: 35px auto;
 }
+
+.form__submit:focus {
+  outline: none;
+  box-shadow: 0 0 4px 1px #ff6547;
+}
