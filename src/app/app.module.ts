@@ -26,6 +26,7 @@ import { AppNoticeFormAddressComponent } from './app-notice-form-address/app-not
 import { AppNoticeFormCheckinCheckoutComponent } from './app-notice-form-checkin-checkout/app-notice-form-checkin-checkout.component';
 import { AppNoticeFormFeaturesComponent } from './app-notice-form-features/app-notice-form-features.component';
 import { AppNoticeFormPhotosComponent } from './app-notice-form-photos/app-notice-form-photos.component';
+import { AppNoticePhotoUploadComponent } from './app-notice-photo-upload/app-notice-photo-upload.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { AppNoticeFormPhotosComponent } from './app-notice-form-photos/app-notic
     AppNoticeFormAddressComponent,
     AppNoticeFormCheckinCheckoutComponent,
     AppNoticeFormFeaturesComponent,
-    AppNoticeFormPhotosComponent
+    AppNoticeFormPhotosComponent,
+    AppNoticePhotoUploadComponent
   ],
   providers: [NoticeService],
   bootstrap: [AppComponent]
