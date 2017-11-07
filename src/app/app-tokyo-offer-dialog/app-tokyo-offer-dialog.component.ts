@@ -4,11 +4,11 @@ import { NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Notice } from '../app-notice/notice';
 
 @Component({
-  selector: 'tokyo-offer-dialog',
-  templateUrl: './tokyo-offer-dialog.component.html',
-  styleUrls: ['./tokyo-offer-dialog.component.css']
+  selector: 'app-tokyo-offer-dialog',
+  templateUrl: './app-tokyo-offer-dialog.component.html',
+  styleUrls: ['./app-tokyo-offer-dialog.component.css']
 })
-export class TokyoOfferDialogComponent {
+export class AppTokyoOfferDialogComponent {
 
   @Input() selectedNotice: Notice;
   @Output() hideDialogEmitter = new EventEmitter<Notice>();
