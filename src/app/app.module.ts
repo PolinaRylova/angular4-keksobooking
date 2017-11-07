@@ -17,7 +17,7 @@ import { AppTokyoOfferDialogComponent } from './app-tokyo-offer-dialog/app-tokyo
 import { AppNoticeHeaderComponent } from './app-notice-header/app-notice-header.component';
 import { AppNoticeFormComponent } from './app-notice-form/app-notice-form.component';
 import { AppNoticeFormLeftPanelComponent } from './app-notice-form-left-panel/app-notice-form-left-panel.component';
-import { FormRightPanelComponent } from './form-right-panel/form-right-panel.component';
+import { AppNoticeFormRightPanelComponent } from './app-notice-form-right-panel/app-notice-form-right-panel.component';
 import { FormNoticeTitleComponent } from './form-notice-title/form-notice-title.component';
 import { FormNoticeTypePriceComponent } from './form-notice-type-price/form-notice-type-price.component';
 import { FormNoticeRoomsGuestsComponent } from './form-notice-rooms-guests/form-notice-rooms-guests.component';
@@ -47,7 +47,7 @@ import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-phot
     AppNoticeHeaderComponent,
     AppNoticeFormComponent,
     AppNoticeFormLeftPanelComponent,
-    FormRightPanelComponent,
+    AppNoticeFormRightPanelComponent,
     FormNoticeTitleComponent,
     FormNoticeTypePriceComponent,
     FormNoticeRoomsGuestsComponent,
