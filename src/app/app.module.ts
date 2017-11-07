@@ -19,7 +19,7 @@ import { AppNoticeFormComponent } from './app-notice-form/app-notice-form.compon
 import { AppNoticeFormLeftPanelComponent } from './app-notice-form-left-panel/app-notice-form-left-panel.component';
 import { AppNoticeFormRightPanelComponent } from './app-notice-form-right-panel/app-notice-form-right-panel.component';
 import { AppNoticeFormTitleComponent } from './app-notice-form-title/app-notice-form-title.component';
-import { FormNoticeTypePriceComponent } from './form-notice-type-price/form-notice-type-price.component';
+import { AppNoticeFormTypePriceComponent } from './app-notice-form-type-price/app-notice-form-type-price.component';
 import { FormNoticeRoomsGuestsComponent } from './form-notice-rooms-guests/form-notice-rooms-guests.component';
 import { AppNoticeFormDescriptionComponent } from './app-notice-form-description/app-notice-form-description.component';
 import { AppNoticeFormAddressComponent } from './app-notice-form-address/app-notice-form-address.component';
@@ -49,7 +49,7 @@ import { AppNoticeFormPhotosComponent } from './app-notice-form-photos/app-notic
     AppNoticeFormLeftPanelComponent,
     AppNoticeFormRightPanelComponent,
     AppNoticeFormTitleComponent,
-    FormNoticeTypePriceComponent,
+    AppNoticeFormTypePriceComponent,
     FormNoticeRoomsGuestsComponent,
     AppNoticeFormDescriptionComponent,
     AppNoticeFormAddressComponent,
