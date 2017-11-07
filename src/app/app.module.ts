@@ -24,7 +24,7 @@ import { FormNoticeRoomsGuestsComponent } from './form-notice-rooms-guests/form-
 import { AppNoticeFormDescriptionComponent } from './app-notice-form-description/app-notice-form-description.component';
 import { AppNoticeFormAddressComponent } from './app-notice-form-address/app-notice-form-address.component';
 import { AppNoticeFormCheckinCheckoutComponent } from './app-notice-form-checkin-checkout/app-notice-form-checkin-checkout.component';
-import { FormNoticeFeaturesComponent } from './form-notice-features/form-notice-features.component';
+import { AppNoticeFormFeaturesComponent } from './app-notice-form-features/app-notice-form-features.component';
 import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-photos.component';
 
 
@@ -54,7 +54,7 @@ import { FormNoticePhotosComponent } from './form-notice-photos/form-notice-phot
     AppNoticeFormDescriptionComponent,
     AppNoticeFormAddressComponent,
     AppNoticeFormCheckinCheckoutComponent,
-    FormNoticeFeaturesComponent,
+    AppNoticeFormFeaturesComponent,
     FormNoticePhotosComponent
   ],
   providers: [NoticeService],
