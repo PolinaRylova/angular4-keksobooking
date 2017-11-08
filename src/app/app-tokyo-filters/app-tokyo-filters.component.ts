@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Notice } from '../app-notice/notice';
+import { Notice } from '../shared/notice';
 
 @Component({
   selector: 'app-tokyo-filters',

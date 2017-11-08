@@ -11,7 +11,7 @@ import { AppTokyoComponent } from './app-tokyo/app-tokyo.component';
 import { AppNoticeComponent } from './app-notice/app-notice.component';
 import { AppMainComponent } from './app-main/app-main.component';
 import { AppTokyoFiltersComponent } from './app-tokyo-filters/app-tokyo-filters.component';
-import { NoticeService } from './app-notice/notice.service';
+import { NoticeService } from './shared/notice.service';
 import { AppTokyoPinMapComponent } from './app-tokyo-pin-map/app-tokyo-pin-map.component';
 import { AppTokyoOfferDialogComponent } from './app-tokyo-offer-dialog/app-tokyo-offer-dialog.component';
 import { AppNoticeHeaderComponent } from './app-notice-header/app-notice-header.component';
