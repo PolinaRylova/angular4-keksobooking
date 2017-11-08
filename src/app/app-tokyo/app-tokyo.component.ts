@@ -15,6 +15,7 @@ export class AppTokyoComponent implements OnInit {
   selectedNotice: Notice;
 
   @Output() selectedEmitter = new EventEmitter<Notice>();
+  @Output() defaultCoordinatesEmitter = new EventEmitter<Coordinates>();
 
   constructor(private noticeService: NoticeService) { }
 
@@ -36,6 +37,10 @@ export class AppTokyoComponent implements OnInit {
     this.noticesToShow = newNotices;
     this.selectedNotice = newNotices[0];
     this.selectedEmitter.emit(newNotices[0]);
+  }
+
+  defaultCoordinatesHandler(coordinates) {
+    this.defaultCoordinatesEmitter.emit(coordinates);
   }
 
   deselectNotice() {

@@ -17,21 +17,19 @@ export class AppTokyoPinMapComponent implements AfterViewInit {
   @Input() notices: Notice[];
   @Input() selectedNotice: Notice;
   @Output() selectedEmitter = new EventEmitter<Notice>();
+  @Output() defaultCoordinatesEmitter = new EventEmitter<Coordinates>();
 
-  mainPinCoordinates: Coordinates = {
-    x: undefined,
-    y: undefined
-  };
+  mainPinCoordinates: Coordinates = new Coordinates();
 
   constructor() { }
   ngAfterViewInit() {
     this.mainPinCoordinates.x = this.el.nativeElement.offsetLeft + this.el.nativeElement.offsetWidth / 2;
     this.mainPinCoordinates.y = this.el.nativeElement.offsetTop + this.el.nativeElement.offsetHeight;
+    this.defaultCoordinatesEmitter.emit(this.mainPinCoordinates);
   }
 
   selectPin(notice: Notice, event) {
     event.stopPropagation();
-    this.selectedNotice = notice;
     this.selectedEmitter.emit(notice);
   }
 

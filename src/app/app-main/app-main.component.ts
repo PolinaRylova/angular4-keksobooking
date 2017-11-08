@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Coordinates } from '../shared/coordinates';
+
 @Component({
   selector: 'app-main',
   templateUrl: './app-main.component.html',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppMainComponent {
 
+  mainPinCoordinates: Coordinates = new Coordinates();
+
   constructor() { }
+
+  defaultCoordinatesHandler(coordinates) {
+    this.mainPinCoordinates.x = coordinates.x;
+    this.mainPinCoordinates.y = coordinates.y;
+  }
 
 }
