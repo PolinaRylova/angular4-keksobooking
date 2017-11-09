@@ -1,6 +1,8 @@
-<div class="pin pin__main" #mainPin>
+<div class="pin pin__main" #mainPin (mousedown)="mouseDownHandler($event)" (mouseup)="mouseUpHandler($event)"
+     [ngStyle]="{'left': mainPinLocation.x + 'px', 'top': mainPinLocation.y + 'px'}">
   <img src="./assets/img/main-pin-image.png" alt="Main Pin" class="rounded" width="40" height="44">
 </div>
-<div *ngFor="let notice of notices" (click)="selectPin(notice, $event)" class="pin" [class.selected]="notice === selectedNotice" [ngStyle]="{'left': notice.location.x + 'px', 'top': notice.location.y + 'px'}" tabindex="0">
+<div *ngFor="let notice of notices" (click)="selectPin(notice, $event)" class="pin" [class.selected]="notice === selectedNotice"
+     [ngStyle]="{'left': notice.location.x + 'px', 'top': notice.location.y + 'px'}" tabindex="0">
   <img src="{{ notice.author.avatar }}" class="rounded" width="40" height="40">
 </div>

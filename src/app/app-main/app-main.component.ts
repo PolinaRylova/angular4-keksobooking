@@ -13,7 +13,7 @@ export class AppMainComponent {
 
   constructor() { }
 
-  defaultCoordinatesHandler(coordinates) {
+  mainPinCoordinatesHandler(coordinates) {
     this.mainPinCoordinates.x = coordinates.x;
     this.mainPinCoordinates.y = coordinates.y;
   }
