@@ -17,7 +17,7 @@ export class NoticeService {
                .toPromise()
                .then(response => {
                  return response.json() as Notice[];})
-               .catch(this.handleError);  
+               .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {
