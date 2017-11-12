@@ -1,6 +1,7 @@
 app-tokyo {
     position: relative;
     display: block;
+    overflow: hidden;
 }
 
 app-notice {
