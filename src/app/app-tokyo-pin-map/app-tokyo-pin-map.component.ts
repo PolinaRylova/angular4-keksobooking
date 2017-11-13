@@ -1,16 +1,17 @@
-import {Component, AfterViewInit, ElementRef, Renderer2, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {Component, OnInit, ElementRef, Renderer2, ViewChild, EventEmitter, Input, Output} from '@angular/core';
 
 import { NgStyle } from '@angular/common';
 
 import { Notice } from '../shared/notice';
 import { Coordinates } from '../shared/coordinates';
+import {DomElementSize} from '../shared/dom-element-size';
 
 @Component({
   selector: 'app-tokyo-pin-map',
   templateUrl: './app-tokyo-pin-map.component.html',
   styleUrls: ['./app-tokyo-pin-map.component.css']
 })
-export class AppTokyoPinMapComponent implements AfterViewInit {
+export class AppTokyoPinMapComponent implements OnInit {
 
   @ViewChild('mainPin') mainPin: ElementRef;
   @Input() notices: Notice[];
@@ -18,21 +19,24 @@ export class AppTokyoPinMapComponent implements AfterViewInit {
   @Output() selectedEmitter = new EventEmitter<Notice>();
   @Output() mainPinCoordinatesEmitter = new EventEmitter<Coordinates>();
 
-  mainPinLocation: Coordinates = {
+  mainPinDefLoc: Coordinates = {
     x: 600,
     y: 300
   };
-  mainPinCoordinates: Coordinates = new Coordinates();
-  startCoordinates: Coordinates = new Coordinates();
-  shiftCoordinates: Coordinates = new Coordinates();
+  mainPinSize: DomElementSize = {
+    width: 75,
+    height: 94
+  };
+  startCoordinates = new Coordinates();
+  shiftCoordinates = new Coordinates();
   listenFunction: Function;
 
   constructor(private renderer: Renderer2) { }
-
-  ngAfterViewInit() {
-    this.mainPinCoordinates.x = this.mainPinLocation.x + this.mainPin.nativeElement.offsetWidth / 2;
-    this.mainPinCoordinates.y = this.mainPinLocation.y + this.mainPin.nativeElement.offsetHeight;
-    this.mainPinCoordinatesEmitter.emit(this.mainPinCoordinates);
+  ngOnInit() {
+    this.mainPinCoordinatesEmitter.emit({
+      x: this.mainPinDefLoc.x + this.mainPinSize.width / 2,
+      y: this.mainPinDefLoc.y + this.mainPinSize.height
+    });
   }
 
   selectPin(notice: Notice, event) {
@@ -58,11 +62,12 @@ export class AppTokyoPinMapComponent implements AfterViewInit {
   }
 
   shiftMainPin() {
-    this.mainPinLocation.x = this.mainPinLocation.x - this.shiftCoordinates.x;
-    this.mainPinLocation.y = this.mainPinLocation.y - this.shiftCoordinates.y;
-    this.mainPinCoordinates.x = this.mainPinLocation.x + this.mainPin.nativeElement.offsetWidth / 2;
-    this.mainPinCoordinates.y = this.mainPinLocation.y + this.mainPin.nativeElement.offsetHeight;
-    this.mainPinCoordinatesEmitter.emit(this.mainPinCoordinates);
+    this.mainPinDefLoc.x = this.mainPinDefLoc.x - this.shiftCoordinates.x;
+    this.mainPinDefLoc.y = this.mainPinDefLoc.y - this.shiftCoordinates.y;
+    this.mainPinCoordinatesEmitter.emit({
+      x: this.mainPinDefLoc.x + this.mainPinSize.width / 2,
+      y: this.mainPinDefLoc.y + this.mainPinSize.height
+    });
   }
 
   mouseUpHandler(event) {
