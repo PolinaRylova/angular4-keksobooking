@@ -12,6 +12,7 @@ export class AppTokyoOfferDialogComponent {
 
   @Input() selectedNotice: Notice;
   @Output() hideDialogEmitter = new EventEmitter<Notice>();
+  lodgePhotos: string[];
 
   constructor() { }
 
