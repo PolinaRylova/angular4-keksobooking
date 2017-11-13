@@ -1,5 +1,5 @@
 <label for="address">Адрес</label>
 <input class="form__bottom-element" id="address" name="address" type="text"
        value="x: {{ mainPinCoordinates.x }}, y: {{ mainPinCoordinates.y }}"
-       placeholder="'x' должно быть от 0 до 1200, 'y' от 0 до 660"
+       placeholder="Доступны значения 'x' от 0 до 1200, 'y' от 0 до 660"
        (input)="inputHandler($event)" required>
