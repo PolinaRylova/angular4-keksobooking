@@ -34,9 +34,6 @@
 }
 
 .pin__main {
-    width: 75px;
-    height: 94px;
-
     background-image: url("../../assets/img/main-pin.png");
 }
 
