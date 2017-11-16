@@ -1,4 +1,4 @@
-import {Component, OnInit, EventEmitter, Output} from '@angular/core';
+import {Component, OnInit, EventEmitter, Input, Output} from '@angular/core';
 
 import { Notice } from '../shared/notice.model';
 import { NoticeService } from '../shared/notice.service';
@@ -14,6 +14,7 @@ export class AppTokyoComponent implements OnInit {
   noticesToShow: Notice[];
   selectedNotice: Notice;
 
+  @Input() inputMainPinCoordinates: Coordinates;
   @Output() selectedEmitter = new EventEmitter<Notice>();
   @Output() mainPinCoordinatesEmitter = new EventEmitter<Coordinates>();
 

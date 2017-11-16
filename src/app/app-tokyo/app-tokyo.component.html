@@ -1,7 +1,8 @@
 <img src="./assets/img/main.jpg" alt="Tokyo" width="1200" height="700" (click)="deselectNotice()">
 <app-tokyo-filters [notices]="noticesFromServer" (filteredNoticesEmitter)="filteredNoticesHandler($event)"></app-tokyo-filters>
 <app-tokyo-pin-map [selectedNotice]="selectedNotice" (selectedEmitter)="selectedHandler($event)"
-                   (mainPinCoordinatesEmitter)="mainPinCoordinatesHandler($event)" [notices]="noticesToShow">
+                   (mainPinCoordinatesEmitter)="mainPinCoordinatesHandler($event)"
+                   [inputMainPinCoordinates]="inputMainPinCoordinates" [notices]="noticesToShow">
 </app-tokyo-pin-map>
 <app-tokyo-offer-dialog [selectedNotice]="selectedNotice" [class.hidden]="selectedNotice === undefined || selectedNotice === null"
                         (hideDialogEmitter)="deselectNotice()" class="dialog">

@@ -1,4 +1,4 @@
-<app-notice-form-address [mainPinCoordinates]="mainPinCoordinates" class="form__element form__element--wide"></app-notice-form-address>
+<app-notice-form-address [mainPinCoordinates]="mainPinCoordinates" (inputCoordinatesEmitter)="inputCoordinatesHandler($event)" class="form__element form__element--wide"></app-notice-form-address>
 <app-notice-form-checkin-checkout class="form__row"></app-notice-form-checkin-checkout>
 <app-notice-form-features class="form__element"></app-notice-form-features>
 <app-notice-form-photos class="form__element"></app-notice-form-photos>

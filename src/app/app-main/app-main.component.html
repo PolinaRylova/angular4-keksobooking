@@ -1,2 +1,2 @@
-<app-tokyo (mainPinCoordinatesEmitter)="mainPinCoordinatesHandler($event)"></app-tokyo>
-<app-notice [mainPinCoordinates]="mainPinCoordinates"></app-notice>
+<app-tokyo (mainPinCoordinatesEmitter)="mainPinCoordinatesHandler($event)" [inputMainPinCoordinates]="inputMainPinCoordinates"></app-tokyo>
+<app-notice [mainPinCoordinates]="mainPinCoordinates" (inputCoordinatesEmitter)="inputCoordinatesHandler($event)"></app-notice>

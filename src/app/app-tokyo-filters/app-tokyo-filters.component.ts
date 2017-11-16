@@ -13,8 +13,8 @@ export class AppTokyoFiltersComponent {
   @Input() notices: Notice[];
   @Output() filteredNoticesEmitter = new EventEmitter<Notice[]>();
 
-  housingType: string = 'any';
-  housingPrice: string = 'any';
+  housingType: any = 'any';
+  housingPrice: any = 'any';
   housingRooms: any = 'any';
   housingGuests: any = 'any';
 
@@ -165,7 +165,7 @@ export class AppTokyoFiltersComponent {
 
   filterNotices() {
     const filteredNotices = this.notices.filter(notice => { return this.isNeedShow(notice); }); // фильтруем
-    this.filteredNoticesEmitter.emit(filteredNotices);  // испускаем событие и передаем отфильтрованные нотисы
+    this.filteredNoticesEmitter.emit(filteredNotices);  // передаем отфильтрованные нотисы
   }
 
   isNeedShow(notice) {

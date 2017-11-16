@@ -9,7 +9,8 @@ import { Coordinates } from '../shared/coordinates.model';
 })
 export class AppMainComponent {
 
-  mainPinCoordinates: Coordinates = new Coordinates();
+  mainPinCoordinates = new Coordinates();
+  inputMainPinCoordinates = new Coordinates();
 
   constructor() { }
 
@@ -18,4 +19,8 @@ export class AppMainComponent {
     this.mainPinCoordinates.y = coordinates.y;
   }
 
+  inputCoordinatesHandler(inputCoordinates: Coordinates) {
+    this.inputMainPinCoordinates.x = inputCoordinates.x;
+    this.inputMainPinCoordinates.y = inputCoordinates.y;
+  }
 }

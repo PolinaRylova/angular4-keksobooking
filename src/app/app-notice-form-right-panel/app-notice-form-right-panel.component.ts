@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Coordinates } from '../shared/coordinates.model';
 
@@ -10,7 +10,11 @@ import { Coordinates } from '../shared/coordinates.model';
 export class AppNoticeFormRightPanelComponent {
 
   @Input() mainPinCoordinates: Coordinates;
+  @Output() inputCoordinatesEmitter = new EventEmitter<Coordinates>();
 
   constructor() { }
+  inputCoordinatesHandler(inputCoordinates: Coordinates) {
+    this.inputCoordinatesEmitter.emit(inputCoordinates);
+  }
 
 }
