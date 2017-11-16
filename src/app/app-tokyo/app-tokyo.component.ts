@@ -1,6 +1,6 @@
 import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 
-import { Notice } from '../shared/notice';
+import { Notice } from '../shared/notice.model';
 import { NoticeService } from '../shared/notice.service';
 
 @Component({

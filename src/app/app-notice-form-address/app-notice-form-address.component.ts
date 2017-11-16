@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Coordinates } from '../shared/coordinates';
+import { Coordinates } from '../shared/coordinates.model';
 
 @Component({
   selector: 'app-notice-form-address',
@@ -14,10 +14,13 @@ export class AppNoticeFormAddressComponent {
   constructor() { }
 
   inputHandler(event) {
-    const inputStringArr = event.target.value.replace(',', '').split(' ');
+    const inputStringArr: string[] = event.target.value.replace(',', '').split(' ');
+    console.log(inputStringArr);
     // Вычленяем элементы массива с координатами x и y и приводим к числу
-    const inputedCoordX = Number(inputStringArr[1]);
-    const inputedCoordY = Number(inputStringArr[3]);
+    const inputedCoordX: number = +(inputStringArr[1]);
+    console.log(inputedCoordX);
+    const inputedCoordY: number = +(inputStringArr[3]);
+    console.log(inputedCoordY);
     // Проверяем, чтобы вводимые значения не выходили за пределы карты
     if (inputedCoordX <= 1200 && inputedCoordY <= 660) {
       // Перемещаем метку в соответствии с введенными координатами и размером метки

@@ -2,9 +2,9 @@ import {Component, OnInit, ElementRef, Renderer2, ViewChild, EventEmitter, Input
 
 import { NgStyle } from '@angular/common';
 
-import { Notice } from '../shared/notice';
-import { Coordinates } from '../shared/coordinates';
-import {DomElementSize} from '../shared/dom-element-size';
+import { Notice } from '../shared/notice.model';
+import { Coordinates } from '../shared/coordinates.model';
+import {DomElementSize} from '../shared/dom-element-size.model';
 
 @Component({
   selector: 'app-tokyo-pin-map',

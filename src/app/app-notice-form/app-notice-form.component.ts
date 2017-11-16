@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Coordinates } from '../shared/coordinates';
+import { Coordinates } from '../shared/coordinates.model';
 
 @Component({
   selector: 'app-notice-form',

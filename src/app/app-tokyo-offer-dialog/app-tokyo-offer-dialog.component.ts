@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
-import { Notice } from '../shared/notice';
+import { Notice } from '../shared/notice.model';
 
 @Component({
   selector: 'app-tokyo-offer-dialog',
