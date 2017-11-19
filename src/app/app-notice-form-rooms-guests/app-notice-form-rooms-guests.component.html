@@ -1,18 +1,12 @@
 <div class="form__element">
   <label for="room_number">Кол-во комнат</label>
-  <select class="form__bottom-element" id="room_number" name="rooms">
-    <option value="1" selected>1 комната</option>
-    <option value="2">2 комнаты</option>
-    <option value="3">3 комнаты</option>
-    <option value="100">100 комнат</option>
+  <select class="form__bottom-element" id="room_number" #roomsSelect name="rooms" (change)="saveSelectedIndex(roomsSelect.selectedIndex)">
+    <option *ngFor="let roomsParam of roomsParams" value="{{ roomsParam.value }}" [class.selected]="roomsParam.selected">{{ roomsParam.text }}</option>
   </select>
 </div>
 <div class="form__element">
   <label for="capacity">Количество мест</label>
   <select class="form__bottom-element" id="capacity" name="capacity">
-    <option value="3">для 3 гостей</option>
-    <option value="2">для 2 гостей</option>
-    <option value="1" selected>для 1 гостя</option>
-    <option value="0">не для гостей</option>
+    <option *ngFor="let guestsParam of guestsParams" value="{{ guestsParam.value }}" [class.selected]="guestsParam.selected" [class.hidden]="guestsParam.disabled" [class.disabled]="guestsParam.disabled">{{ guestsParam.text }}</option>
   </select>
 </div>
