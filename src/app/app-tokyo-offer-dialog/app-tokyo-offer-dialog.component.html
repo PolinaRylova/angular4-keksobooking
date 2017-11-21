@@ -17,6 +17,8 @@
     </div>
     <p class="lodge__description">{{ selectedNotice.offer.description }}
     </p>
-    <div class="lodge__photos"></div>
+    <div class="lodge__photos">
+      <img *ngFor="let photo of selectedNotice.offer.photos" src="{{ photo }}" width="50" height="auto" alt="photo">
+    </div>
   </div>
 </div>
