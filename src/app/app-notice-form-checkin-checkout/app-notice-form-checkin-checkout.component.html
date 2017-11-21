@@ -1,12 +1,12 @@
 <div class="form__element">
     <label for="timein">Время заезда и выезда</label>
-    <select class="form__bottom-element" id="timein" name="timein">
-      <option *ngFor="let time of times" value="{{ time }}">После {{ time }}</option>
+    <select class="form__bottom-element" id="timein" #timeIn name="timein" title="Time to go in" (change)="changeTimeHandler(timeIn.value)">
+      <option *ngFor="let time of times" value="{{ time.value }}" [selected]="time.selected">После {{ time.text }}</option>
     </select>
   </div>
   <div class="form__element">
     <label for="timeout">&nbsp;</label>
-    <select class="form__bottom-element" id="timeout" name="timeout" title="Time to go out">
-      <option *ngFor="let time of times" value="{{ time }}">Выезд до {{ time }}</option>
+    <select class="form__bottom-element" id="timeout" #timeOut name="timeout" title="Time to go out" (change)="changeTimeHandler(timeOut.value)">
+      <option *ngFor="let time of times" value="{{ time.value }}" [selected]="time.selected">Выезд до {{ time.text }}</option>
     </select>
   </div>

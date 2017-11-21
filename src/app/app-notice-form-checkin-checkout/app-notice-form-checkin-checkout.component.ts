@@ -7,11 +7,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppNoticeFormCheckinCheckoutComponent implements OnInit {
 
-  times: string[] = ['12:00', '13:00', '14:00'];
+  times = [
+    {
+      value: '12:00',
+      text: 12,
+      selected: true
+    },
+    {
+      value: '13:00',
+      text: 13,
+      selected: false
+    },
+    {
+      value: '14:00',
+      text: 14,
+      selected: false
+    }
+  ];
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  changeTimeHandler(value) {
+    this.times.forEach(function (item) {
+      if (item.value === value) {
+        item.selected = true;
+      } else {
+        item.selected = false;
+      }
+    });
+  }
 }
