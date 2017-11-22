@@ -14,7 +14,7 @@ export class AppNoticeHeaderComponent {
 
   constructor() { }
 
-  fileLoadHandler(url) {
+  avatarLoadHandler(url) {
     this.preview.src = url;
     this.preview.width = 70;
     this.preview.height = 70;

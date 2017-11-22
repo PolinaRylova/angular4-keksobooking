@@ -1,11 +1,11 @@
-import { Component, OnInit, Renderer2, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Renderer2, EventEmitter, Output, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-notice-photo-upload',
   templateUrl: './app-notice-photo-upload.component.html',
   styleUrls: ['./app-notice-photo-upload.component.css']
 })
-export class AppNoticePhotoUploadComponent implements OnInit {
+export class AppNoticePhotoUploadComponent implements OnInit, OnDestroy {
   FILE_TYPES = ['gif', 'jpg', 'jpeg', 'png'];
   listenFunction: Function;
   @Output() fileLoadEmitter = new EventEmitter<URL>();
@@ -28,5 +28,9 @@ export class AppNoticePhotoUploadComponent implements OnInit {
       });
       reader.readAsDataURL(file);
     }
+  }
+
+  ngOnDestroy() {
+    this.listenFunction();
   }
 }

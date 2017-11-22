@@ -1,5 +1,7 @@
 <label>Фотографии жилья</label>
 <div class="form__photo-container form__bottom-element">
-  <app-notice-photo-upload></app-notice-photo-upload>
-  <div class="form__photo" *ngFor="let photo of formPhotos"></div>
+  <app-notice-photo-upload (fileLoadEmitter)="housePhotoLoadHandler($event)"></app-notice-photo-upload>
+  <div class="form__photo" *ngFor="let photo of formPhotos">
+    <img *ngIf="photo.src" src="{{photo.src}}" alt="Housing photo" width="70" height="70">
+  </div>
 </div>
