@@ -1,8 +1,8 @@
 <div class="notice__description">Ваша фотография (для карты)</div>
 <div class="notice__photo">
   <div class="notice__preview">
-    <img src="../assets/img/muffin.png" alt="User Avatar" width="40" height="44">
+    <img src="{{preview.src}}" alt="User Avatar" width="{{preview.width}}" height="{{preview.height}}">
   </div>
-  <app-notice-photo-upload></app-notice-photo-upload>
+  <app-notice-photo-upload (fileLoadEmitter)="fileLoadHandler($event)"></app-notice-photo-upload>
   <p class="notice__info">Заполните все обязательные поля, назначьте цену, загрузите фотографии. Придумайте интересное описание. Оно сделает объявление более живым и привлекательным. Получившееся объявление должно давать гостям полное представление о вашем жилье.</p>
 </div>

@@ -1,4 +1,4 @@
 <div class="drop-zone upload" tabindex="0">
-  <input type="file">
+  <input type="file" #avatarInput (change)="avatarInputHandler($event)">
   <span class="drop-zone">Загрузите или&nbsp;перетащите сюда фото</span>
 </div>
