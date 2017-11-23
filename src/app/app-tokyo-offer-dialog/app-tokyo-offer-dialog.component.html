@@ -1,7 +1,7 @@
 <div class="container" *ngIf="selectedNotice != undefined">
   <div class="dialog__title">
     <img src="{{ selectedNotice.author.avatar }}" alt="Avatar" width="70" height="70">
-    <a href="#" class="dialog__close" tabindex="0" (click)="hideDialog()">
+    <a href="#" class="dialog__close" tabindex="0" (click)="hideDialog()" (keyup.enter)="hideDialog()">
       <img src="../assets/img/close.svg" alt="close" width="22" height="22">
     </a>
   </div>
