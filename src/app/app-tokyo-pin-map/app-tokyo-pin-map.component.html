@@ -2,7 +2,7 @@
      [ngStyle]="{'width': mainPinSize.width + 'px', 'height': mainPinSize.height + 'px', 'left': mainPinDefLoc.x + 'px', 'top': mainPinDefLoc.y + 'px'}">
   <img src="./assets/img/main-pin-image.png" alt="Main Pin" class="rounded" width="40" height="44">
 </div>
-<div *ngFor="let notice of notices" (click)="selectPin(notice, $event)" (keyup.enter)="selectPin(notice, $event)" class="pin" [class.selected]="notice === selectedNotice"
+<div *ngFor="let notice of notices" (click)="selectPin(notice, $event)" (keydown.enter)="selectPin(notice, $event)" class="pin" [class.selected]="notice === selectedNotice"
      [ngStyle]="{'left': notice.location.x + 'px', 'top': notice.location.y + 'px'}" tabindex="0">
   <img src="{{ notice.author.avatar }}" class="rounded" width="40" height="40">
 </div>
