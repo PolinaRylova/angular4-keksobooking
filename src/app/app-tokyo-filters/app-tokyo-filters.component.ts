@@ -182,7 +182,7 @@ export class AppTokyoFiltersComponent {
   }
 
   checkSelectValue(selectedValue, noticeParam) {
-    let noticeStringParam = noticeParam.toString();
+    const noticeStringParam = noticeParam.toString();
     if (selectedValue !== 'any') {
       if (selectedValue !== noticeStringParam) {
         return false;
