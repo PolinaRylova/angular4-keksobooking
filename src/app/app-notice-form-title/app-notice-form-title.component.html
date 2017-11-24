@@ -1,2 +1,3 @@
 <label for="title">Заголовок объявления</label>
-<input class="form__bottom-element" id="title" name="title" type="text" placeholder="Милая, уютная квартирка, например" minlength="30" maxlength="100" required>
+<input class="form__bottom-element" type="text" id="title" name="title" [(ngModel)]="title" #noticeTitle="ngModel"
+       (ngModelChange)="changeTitleValue(noticeTitle.value)" placeholder="Милая, уютная квартирка, например" minlength="30" maxlength="100" required>
