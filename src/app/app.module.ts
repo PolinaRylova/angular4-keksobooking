@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -28,10 +29,10 @@ import { AppNoticeFormFeaturesComponent } from './app-notice-form-features/app-n
 import { AppNoticeFormPhotosComponent } from './app-notice-form-photos/app-notice-form-photos.component';
 import { AppNoticePhotoUploadComponent } from './app-notice-photo-upload/app-notice-photo-upload.component';
 
-
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
