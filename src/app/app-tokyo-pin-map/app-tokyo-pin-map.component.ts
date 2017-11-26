@@ -1,4 +1,4 @@
-import {Component, OnInit, DoCheck, ElementRef, Renderer2, ViewChild, EventEmitter, Input, Output} from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2, ViewChild, EventEmitter, Input, Output, DoCheck } from '@angular/core';
 
 import { NgStyle } from '@angular/common';
 
@@ -31,7 +31,7 @@ export class AppTokyoPinMapComponent implements OnInit, DoCheck {
   };
   startCoordinates = new Coordinates();
   shiftCoordinates = new Coordinates();
-  listenFunction: Function;
+  mouseMoveListenFunction: Function;
 
   constructor(private renderer: Renderer2) { }
   ngOnInit() {
@@ -40,12 +40,12 @@ export class AppTokyoPinMapComponent implements OnInit, DoCheck {
       y: this.mainPinDefLoc.y + this.mainPinSize.height
     });
   }
-
   ngDoCheck() {
-    console.log(this.inputMainPinCoordinates.x);
     if (this.inputMainPinCoordinates.x !== undefined && this.inputMainPinCoordinates.y !== undefined) {
       this.mainPinDefLoc.x = this.inputMainPinCoordinates.x - this.mainPinSize.width / 2;
       this.mainPinDefLoc.y = this.inputMainPinCoordinates.y - this.mainPinSize.height;
+      this.inputMainPinCoordinates.x = undefined;
+      this.inputMainPinCoordinates.y = undefined;
     }
   }
 
@@ -57,7 +57,7 @@ export class AppTokyoPinMapComponent implements OnInit, DoCheck {
   mouseDownHandler(event: MouseEvent) {
     this.startCoordinates.x = event.clientX;
     this.startCoordinates.y = event.clientY;
-    this.listenFunction = this.renderer.listen(this.mainPin.nativeElement, 'mousemove', (evt) => {
+    this.mouseMoveListenFunction = this.renderer.listen(this.mainPin.nativeElement, 'mousemove', (evt) => {
       this.mouseMoveHandler(evt);
     });
   }
@@ -72,6 +72,7 @@ export class AppTokyoPinMapComponent implements OnInit, DoCheck {
   }
 
   shiftMainPin() {
+    console.log('Зашёл в shiftMainPin');
     this.mainPinDefLoc.x = this.mainPinDefLoc.x - this.shiftCoordinates.x;
     this.mainPinDefLoc.y = this.mainPinDefLoc.y - this.shiftCoordinates.y;
     this.mainPinCoordinatesEmitter.emit({
@@ -82,6 +83,6 @@ export class AppTokyoPinMapComponent implements OnInit, DoCheck {
 
   mouseUpHandler(event) {
     event.preventDefault();
-    this.listenFunction();
+    this.mouseMoveListenFunction();
   }
 }

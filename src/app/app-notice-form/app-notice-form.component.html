@@ -1,9 +1,9 @@
-<form class="notice__form" autocomplete="off">
+<form #noticeForm="ngForm" class="notice__form" autocomplete="off" novalidate="">
   <div class="form__content">
     <app-notice-form-left-panel class="form__panel"></app-notice-form-left-panel>
     <app-notice-form-right-panel class="form__panel" [mainPinCoordinates]="mainPinCoordinates"
                                  (inputCoordinatesEmitter)="inputCoordinatesHandler($event)">
     </app-notice-form-right-panel>
   </div>
-  <button class="form__submit" type="submit">Опубликовать</button>
+  <button class="form__submit" type="submit" (submit)="noticeFormSubmitHandler($event)" (keydown.enter)="noticeFormEnterHandler($event)">Опубликовать</button>
 </form>
