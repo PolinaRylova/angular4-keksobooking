@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Доделать по проекту
+ 
+ 1. Дописать валидацию на Angular.
+ 2. Функционал для кнопки "Опубликовать" (если валидно - отправка на сервер и сброс значений в полях формы).
+ 3. После отправки данные на карте должны обновиться (отобразить пин по только что пришедшему на сервер объявлению).
