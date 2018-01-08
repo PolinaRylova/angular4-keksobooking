@@ -5,5 +5,5 @@
                                  (inputCoordinatesEmitter)="inputCoordinatesHandler($event)">
     </app-notice-form-right-panel>
   </div>
-  <button class="form__submit" type="submit" (submit)="noticeFormSubmitHandler($event)" (keydown.enter)="noticeFormEnterHandler($event)">Опубликовать</button>
+  <button class="form__submit" type="submit" [disabled]="noticeForm.invalid || noticeForm.pristine" (submit)="noticeFormSubmitHandler($event)" (keydown.enter)="noticeFormEnterHandler($event)">Опубликовать</button>
 </form>
